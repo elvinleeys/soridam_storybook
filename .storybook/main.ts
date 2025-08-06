@@ -15,8 +15,9 @@ const config: StorybookConfig = {
     "name": "@storybook/nextjs",
     "options": {}
   },
-  "staticDirs": [
-    "..\\public"
-  ],
+  staticDirs: ["../public"],
+  core: {
+    builder: "@storybook/builder-webpack5"
+  },
 };
 export default config;

@@ -1,5 +1,4 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   @font-face {
@@ -25,5 +24,160 @@
     src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
+  }
+}
+
+@theme {
+  /* Font family */
+  --font-pretendard: "Pretendard", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+
+  /* Font sizes (converted from your tailwind config rem values) */
+  --text-xs: 0.75rem;      /* 12px */
+  --lineheight-xs: 1.5rem; /* 24px */
+  --letterspacing-xs: 0;
+  --fontweight-xs: 400;
+
+  --text-sm: 0.875rem;      /* 14px */
+  --lineheight-sm: 1.25rem; /* 20px */
+  --letterspacing-sm: 0;
+  --fontweight-sm: 400;
+
+  --text-base: 1rem;    /* 16px */
+  --lineheight-base: 1.5rem; /* 24px */
+  --letterspacing-base: 0;
+  --fontweight-base: 400;
+
+  --text-lg: 1.125rem;      /* 18px */
+  --lineheight-lg: 1.75rem; /* 28px */
+  --letterspacing-lg: 0;
+  --fontweight-lg: 500;
+
+  --text-xl: 1.25rem;      /* 20px */
+  --lineheight-xl: 1.25rem; /* 20px (as in your config) */
+  --letterspacing-xl: 0;
+  --fontweight-xl: 600;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Colors (from your config) */
+  --color-neutral-black: #060606;
+  --color-primary-blue: #007BFF;
+  --color-primary-red: #FF3131;
+  --color-neutral-gray: #7B7B7B;
+  --color-sub-gray: #6D6D6D;
+  --color-dark-gray: #2A2A2A;
+  --color-light-black: rgba(0,0,0,0.54); /* #0000008A ~ 54% opacity */
+
+  /* Button / radii examples (you can tweak) */
+  --radius-button-default: 5px;
+  --radius-tag-button: 17.5px;
+}
+
+/* -----------------------
+   기본 바디 폰트 설정
+   ----------------------- */
+body {
+  font-family: var(--font-pretendard);
+}
+
+/* -----------------------
+   텍스트 유틸 클래스
+   (Tailwind 유틸을 보완/대체하는 목적)
+   ----------------------- */
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--lineheight-xs);
+  letter-spacing: var(--letterspacing-xs);
+  font-weight: var(--fontweight-xs);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--lineheight-sm);
+  letter-spacing: var(--letterspacing-sm);
+  font-weight: var(--fontweight-sm);
+}
+
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--lineheight-base);
+  letter-spacing: var(--letterspacing-base);
+  font-weight: var(--fontweight-base);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--lineheight-lg);
+  letter-spacing: var(--letterspacing-lg);
+  font-weight: var(--fontweight-lg);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--lineheight-xl);
+  letter-spacing: var(--letterspacing-xl);
+  font-weight: var(--fontweight-xl);
+}
+
+@layer utilities {
+  /* 예시: 유틸로서 변수 기반 색상 사용 */
+  .bg-neutral-black {
+    background-color: var(--color-neutral-black);
+  }
+
+  .bg-primary-blue {
+    background-color: var(--color-primary-blue);
+  }
+
+  .bg-primary-red {
+    background-color: var(--color-primary-red);
+  }
+
+  .bg-neutral-gray {
+    background-color: var(--color-neutral-gray);
+  }
+
+  .bg-sub-gray {
+    background-color: var(--color-sub-gray);
+  }
+
+  .bg-dark-gray {
+    background-color: var(--color-dark-gray);
+  }
+
+  .bg-light-black {
+    background-color: var(--color-light-black);
+  }
+
+  .text-neutral-black {
+    color: var(--color-neutral-black);
+  }
+
+  .text-primary-blue {
+    color: var(--color-primary-blue);
+  }
+
+  .text-primary-red {
+    color: var(--color-primary-red);
+  }
+
+  .text-neutral-gray {
+    color: var(--color-neutral-gray);
+  }
+
+  .text-sub-gray {
+    color: var(--color-sub-gray);
+  }
+
+  .text-dark-gray {
+    color: var(--color-dark-gray);
+  }
+
+  .text-light-black {
+    color: var(--color-light-black);
   }
 }
