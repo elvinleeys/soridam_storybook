@@ -1,54 +1,86 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
+import { Button } from '../component/button/Button'; // Button 컴포넌트의 실제 경로에 맞게 수정해주세요.
 
-import { fn } from 'storybook/test';
-
-import { Button } from './Button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-  title: 'Example/Button',
+// Button 컴포넌트에 대한 메타데이터를 정의합니다.
+// Storybook UI에서 'Components/Button'으로 표시됩니다.
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
   component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  tags: ['autodocs'], // Storybook 문서 자동 생성 기능을 활성화합니다.
   argTypes: {
-    backgroundColor: { control: 'color' },
+    // Storybook Controls 패널에서 각 prop을 조작할 수 있도록 설정합니다.
+    buttonType: {
+      control: { type: 'radio' },
+      options: ['primary', 'secondary', 'ghost'],
+      description: '버튼의 시각적 타입 (Primary, Secondary, Ghost)',
+    },
+    size: {
+      control: { type: 'radio' },
+      options: ['medium', 'large'],
+      description: '버튼의 크기 (Medium, Large)',
+    },
+    label: {
+      control: 'text',
+      description: '버튼에 표시될 텍스트',
+    },
+    onClick: {
+      action: 'clicked', // 버튼 클릭 시 Storybook Actions 패널에 로그를 남깁니다.
+      description: '버튼 클릭 시 실행될 핸들러',
+    },
+    styleArg: {
+      control: 'text',
+      description: 'Tailwind CSS 클래스를 사용하여 기본 스타일을 오버라이드합니다.',
+    },
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
-};
+// StoryObj 타입을 사용하여 각 스토리의 타입을 명확히 합니다.
+type Story = StoryObj<typeof Button>;
 
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-};
+// --- Primary Button Stories ---
 
-export const Large: Story = {
+export const PrimaryLarge: Story = {
   args: {
+    buttonType: 'primary',
     size: 'large',
-    label: 'Button',
+    label: '측정 저장',
+    onClick: () => console.log('Primary Large Clicked'),
   },
+  name: 'Primary / Large', // Storybook UI에 표시될 스토리 이름
 };
 
-export const Small: Story = {
+export const PrimaryMedium: Story = {
   args: {
-    size: 'small',
-    label: 'Button',
+    buttonType: 'primary',
+    size: 'medium',
+    label: '확인',
+    onClick: () => console.log('Primary Medium Clicked'),
   },
+  name: 'Primary / Medium',
+};
+
+// --- Secondary Button Stories ---
+
+export const SecondaryLarge: Story = {
+  args: {
+    buttonType: 'secondary',
+    size: 'large',
+    label: '측정 취소',
+    onClick: () => console.log('Secondary Large Clicked'),
+  },
+  name: 'Secondary / Large',
+};
+
+// --- Ghost Button Stories ---
+
+export const GhostLarge: Story = {
+  args: {
+    buttonType: 'ghost',
+    size: 'large',
+    label: '측정 취소',
+    onClick: () => console.log('Ghost Large Clicked'),
+  },
+  name: 'Ghost / Large',
 };
