@@ -1,3 +1,5 @@
+'use client';
+
 import { flexRowCenter } from "@/mixin/style";
 
 // 버튼 타입에 따른 Tailwind 클래스를 미리 정의
@@ -25,20 +27,20 @@ export interface ButtonProps {
   /** How large should the button be? */
   size?: ButtonSize;
   /** Button contents */
-  label: string;
+  children: React.ReactNode;
   /** Click handler */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   /** Optional custom class to override default styles */
-  styleArg?: string; // ✅ 사용자 지정 클래스 추가
+  className?: string; // ✅ 사용자 지정 클래스 추가
 }
 
 /** Primary UI component for user interaction */
 export const Button = ({
   buttonType = 'primary',
   size = 'large',
-  label,
+  children,
   onClick,
-  styleArg,
+  className,
   ...props
 }: ButtonProps) => {
   // 공통적으로 사용되는 폰트 스타일 및 중앙 정렬 클래스
@@ -48,7 +50,7 @@ export const Button = ({
   const currentSizeStyles = sizeStyles[size];
 
   // 모든 클래스를 합쳐서 className에 전달
-  const finalClassNames = `${commonStyles} ${typeStyles} ${currentSizeStyles} ${styleArg || ''}`;
+  const finalClassNames = `${commonStyles} ${typeStyles} ${currentSizeStyles} ${className || ''}`;
 
   return (
     <button
@@ -57,7 +59,7 @@ export const Button = ({
       onClick={onClick}
       {...props}
     >
-      {label}
+      {children}
     </button>
   );
 };

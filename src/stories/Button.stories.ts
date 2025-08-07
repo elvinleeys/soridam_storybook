@@ -19,15 +19,15 @@ const meta: Meta<typeof Button> = {
       options: ['medium', 'large'],
       description: '버튼의 크기 (Medium, Large)',
     },
-    label: {
+    children: {
       control: 'text',
-      description: '버튼에 표시될 텍스트',
+      description: '버튼 내부에 표시될 내용입니다. 텍스트, 아이콘, 또는 다른 컴포넌트가 올 수 있습니다.',
     },
     onClick: {
       action: 'clicked', // 버튼 클릭 시 Storybook Actions 패널에 로그를 남깁니다.
       description: '버튼 클릭 시 실행될 핸들러',
     },
-    styleArg: {
+    className: {
       control: 'text',
       description: 'Tailwind CSS 클래스를 사용하여 기본 스타일을 오버라이드합니다.',
     },
@@ -45,7 +45,7 @@ export const PrimaryLarge: Story = {
   args: {
     buttonType: 'primary',
     size: 'large',
-    label: '측정 저장',
+    children: '측정 저장',
     onClick: () => console.log('Primary Large Clicked'),
   },
   name: 'Primary / Large', // Storybook UI에 표시될 스토리 이름
@@ -55,7 +55,7 @@ export const PrimaryMedium: Story = {
   args: {
     buttonType: 'primary',
     size: 'medium',
-    label: '확인',
+    children: '확인',
     onClick: () => console.log('Primary Medium Clicked'),
   },
   name: 'Primary / Medium',
@@ -67,7 +67,7 @@ export const SecondaryLarge: Story = {
   args: {
     buttonType: 'secondary',
     size: 'large',
-    label: '측정 취소',
+    children: '측정 취소',
     onClick: () => console.log('Secondary Large Clicked'),
   },
   name: 'Secondary / Large',
@@ -79,7 +79,7 @@ export const GhostLarge: Story = {
   args: {
     buttonType: 'ghost',
     size: 'large',
-    label: '측정 취소',
+    children: '측정 취소',
     onClick: () => console.log('Ghost Large Clicked'),
   },
   name: 'Ghost / Large',
