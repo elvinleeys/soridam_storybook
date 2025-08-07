@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/nextjs';
+import { themes } from 'storybook/theming';
 import '../src/app/globals.css';
 
 const preview: Preview = {
@@ -15,7 +16,15 @@ const preview: Preview = {
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
       test: 'todo'
-    }
+    },
+    
+    themes: {
+      default: 'light',
+      list: [
+        { name: 'light', class: 'light', color: '#ffffff', default: true },
+        { name: 'dark', class: 'dark', color: '#000000' },
+      ],
+    },
   },
 };
 
