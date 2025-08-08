@@ -11,13 +11,13 @@ const meta: Meta<typeof Button> = {
     // Storybook Controls 패널에서 각 prop을 조작할 수 있도록 설정합니다.
     buttonType: {
       control: { type: 'radio' },
-      options: ['primary', 'secondary', 'ghost'],
-      description: '버튼의 시각적 타입 (Primary, Secondary, Ghost)',
+      options: ['primary', 'secondary', 'tertiary', 'ghost'],
+      description: '버튼의 시각적 타입 (Primary, Secondary, Tertiary, Ghost)',
     },
     size: {
       control: { type: 'radio' },
-      options: ['medium', 'large'],
-      description: '버튼의 크기 (Medium, Large)',
+      options: ['large', 'medium', 'small', 'xsmall'],
+      description: '버튼의 크기 (Large, Medium, Small, Xsmall)',
     },
     children: {
       control: 'text',
@@ -61,6 +61,26 @@ export const PrimaryMedium: Story = {
   name: 'Primary / Medium',
 };
 
+export const PrimarySmall: Story = {
+  args: {
+    buttonType: 'primary',
+    size: 'small',
+    children: '적용',
+    onClick: () => console.log('Primary Small Clicked'),
+  },
+  name: 'Primary / Small',
+};
+
+export const PrimaryXSmall: Story = {
+  args: {
+    buttonType: 'primary',
+    size: 'xsmall',
+    children: '작성하기',
+    onClick: () => console.log('Primary XSmall Clicked'),
+  },
+  name: 'Primary / XSmall',
+};
+
 // --- Secondary Button Stories ---
 
 export const SecondaryLarge: Story = {
@@ -71,6 +91,27 @@ export const SecondaryLarge: Story = {
     onClick: () => console.log('Secondary Large Clicked'),
   },
   name: 'Secondary / Large',
+};
+
+export const SecondaryXSmall: Story = {
+  args: {
+    buttonType: 'secondary',
+    size: 'xsmall',
+    children: '뒤로가기',
+    onClick: () => console.log('Secondary XSmall Clicked'),
+  },
+  name: 'Secondary / XSmall',
+};
+
+// --- Tertiary Button Stories ---
+export const TertiarySmall: Story = {
+  args: {
+    buttonType: 'tertiary',
+    size: 'small',
+    children: '초기화',
+    onClick: () => console.log('Tertiary Small Clicked'),
+  },
+  name: 'Tertiary / Small',
 };
 
 // --- Ghost Button Stories ---

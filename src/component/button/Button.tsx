@@ -5,14 +5,17 @@ import { flexRowCenter } from "@/mixin/style";
 // 버튼 타입에 따른 Tailwind 클래스를 미리 정의
 const buttonStyles = {
   primary: "bg-primary-blue text-white",
-  secondary: "bg-neutral-gray text-white", 
-  ghost: "bg-white text-neutral-gray border-none", // 배경이 흰색, 글씨가 #808080
+  secondary: "bg-neutral-gray text-white",
+  tertiary: "bg-white text-primary-blue border-[0.054375rem] border-primary-blue", 
+  ghost: "bg-white text-[#595959] border-none", // 배경이 흰색, 글씨가 #808080
 };
 
 // 버튼 크기에 따른 Tailwind 클래스를 미리 정의
 const sizeStyles = {
-  medium: "w-[15.25rem] h-[2.5rem] rounded-[0.437rem] font-medium text-md", // 244x40, 6.99px, medium(500), 16px
   large: "w-[21.25rem] h-[3.125rem] rounded-[3.625rem] font-semibold text-xl", // 340x50, 58px, semibold(600), 20px
+  medium: "w-[15.25rem] h-[2.5rem] rounded-[0.437rem] font-medium text-md", // 244x40, 6.99px, medium(500), 16px
+  small: "w-[9.875rem] h-[2.5rem] rounded-[0.437rem] font-regular text-base",
+  xsmall: "w-[6.875rem] h-[2.5rem] rounded-[0.437rem] font-regular text-base",
 };
 
 // buttonStyles 객체의 키를 타입으로 지정
