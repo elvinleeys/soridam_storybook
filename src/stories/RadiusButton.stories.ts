@@ -27,9 +27,35 @@ export default meta;
 type Story = StoryObj<typeof RadiusButton>;
 
 // ✅ 기본 버튼 스토리
-export const Default: Story = {
+export const Within500m: Story = {
   args: {
     label: '500m 이하',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '클릭 시 내부 상태(active)에 따라 스타일이 바뀝니다.',
+      },
+    },
+  },
+};
+
+export const Within1km: Story = {
+  args: {
+    label: '1km 이하',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: '클릭 시 내부 상태(active)에 따라 스타일이 바뀝니다.',
+      },
+    },
+  },
+};
+
+export const Within2km: Story = {
+  args: {
+    label: '2km 이하',
   },
   parameters: {
     docs: {
