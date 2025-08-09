@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import RadiusButton from '../component/filter/radiusButton/RadiusButton';
+import RadiusButton from '../component/filter/buttons/radiusButton/RadiusButton';
 
 // 👇 기본 메타 설정
 const meta: Meta<typeof RadiusButton> = {
@@ -11,6 +11,11 @@ const meta: Meta<typeof RadiusButton> = {
       control: 'text',
       description: '버튼에 표시될 텍스트',
       defaultValue: '500m 이하',
+    },
+    active: {
+      control: 'boolean',
+      description: '버튼의 활성화 상태를 지정합니다.',
+      defaultValue: false,
     },
     onClick: {
       action: 'clicked',
@@ -30,11 +35,12 @@ type Story = StoryObj<typeof RadiusButton>;
 export const Within500m: Story = {
   args: {
     label: '500m 이하',
+    active: false,
   },
   parameters: {
     docs: {
       description: {
-        story: '클릭 시 내부 상태(active)에 따라 스타일이 바뀝니다.',
+        story: '500m 이하 범위를 나타내는 버튼입니다. `active` prop으로 선택 상태를 제어합니다.',
       },
     },
   },
@@ -43,11 +49,12 @@ export const Within500m: Story = {
 export const Within1km: Story = {
   args: {
     label: '1km 이하',
+    active: true,
   },
   parameters: {
     docs: {
       description: {
-        story: '클릭 시 내부 상태(active)에 따라 스타일이 바뀝니다.',
+        story: '1km 이하 범위를 나타내는 버튼입니다. 이 예시는 `active`가 true인 상태입니다.',
       },
     },
   },
@@ -56,11 +63,12 @@ export const Within1km: Story = {
 export const Within2km: Story = {
   args: {
     label: '2km 이하',
+    active: false,
   },
   parameters: {
     docs: {
       description: {
-        story: '클릭 시 내부 상태(active)에 따라 스타일이 바뀝니다.',
+        story: '2km 이하 범위를 나타내는 버튼입니다.',
       },
     },
   },

@@ -1,20 +1,20 @@
 'use client';
 
 import { flexRowCenter } from "@/mixin/style";
-import { useState } from "react";
 
 export interface RadiusBtnProps {
   label: string;
+  active?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
 }
 
 export default function RadiusButton({
   label,
+  active=false,
   onClick,
   className
 }: RadiusBtnProps) {
-  const [active, setActive] = useState(false);
 
   // 공통 스타일
   const commonStyles =
@@ -30,16 +30,11 @@ export default function RadiusButton({
 
   const finalClassNames = `${commonStyles} ${buttonStyle} ${className || ''}`;
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    setActive(!active);
-    onClick?.(e); // onClick prop이 있을 때만 실행
-  };
-
   return (
     <button
       type="button"
       className={finalClassNames}
-      onClick={handleClick}
+      onClick={onClick}
     >
       {label}
     </button>
