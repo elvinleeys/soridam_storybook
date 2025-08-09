@@ -7,7 +7,7 @@ const buttonStyles = {
   primary: "bg-primary-blue text-white",
   secondary: "bg-neutral-gray text-white",
   tertiary: "bg-white text-primary-blue border-[0.054375rem] border-primary-blue", 
-  ghost: "bg-white text-[#595959] border-none", // 배경이 흰색, 글씨가 #808080
+  ghost: "bg-white text-[#757575] border-none", // 배경이 흰색, 글씨가 #808080
 };
 
 // 버튼 크기에 따른 Tailwind 클래스를 미리 정의
