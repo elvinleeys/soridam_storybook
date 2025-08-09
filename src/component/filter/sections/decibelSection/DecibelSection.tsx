@@ -6,23 +6,13 @@ interface DecibelOption {
     iconSrc: string;     // 데시벨 아이콘 경로
 }
 
-type MultiSelectProps = {
-  title: string;  //Section 제목
-  options: DecibelOption[]; // 데시벨 옵션 버튼 항목과 이미지 경로
-  selected: string[]; 
-  onSelect: (option: string) => void;
-  allowMultiple: true;
-};
-
-type SingleSelectProps = {
-  title: string;
-  options: DecibelOption[];
-  selected: string;
-  onSelect: (option: string) => void;
-  allowMultiple?: false;
-};
-
-type SelectProps = MultiSelectProps | SingleSelectProps;
+interface DecibelSectionProps {
+    title: string;                 // section 제목
+    options: DecibelOption[];      // 옵션 목록
+    selected: string[] | string;            // 선택된 옵션들
+    onSelect: (option: string) => void; // 버튼 클릭 핸들러
+    allowMultiple?: boolean;       // 중복 선택 가능 여부
+}
 
 export default function DecibelSection({
     title,
@@ -30,7 +20,7 @@ export default function DecibelSection({
     selected,
     onSelect,
     allowMultiple = true,
-}: SelectProps) {
+}: DecibelSectionProps) {
 
     return (
         <div className={`${flexCol} gap-5`}>
@@ -40,7 +30,7 @@ export default function DecibelSection({
                     {title}
                 </p>
                 {allowMultiple && (
-                    <p className={`text-neutral-gray text-sm ${flexRowCenter}`}>
+                    <p className={`text-[#757575] text-sm ${flexRowCenter}`}>
                         중복선택 가능
                     </p>
                 )}
@@ -61,7 +51,7 @@ export default function DecibelSection({
                             onClick={() => onSelect(option.label)}
                         />
                         {index === 0 && (
-                            <span className={`ml-2 text-neutral-gray text-sm ${flexRowCenter}`}>
+                            <span className={`ml-2 text-[#757575] text-sm ${flexRowCenter}`}>
                                 기본값
                             </span>
                         )}
