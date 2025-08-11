@@ -1,14 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import DecibelButton from "../component/filter/buttons/decibelButton/DecibelButton";
+import { DecibelIconLevel } from "@/component/decibel/decibelLevel/Decibel";
 
 const meta: Meta<typeof DecibelButton> = {
   title: "Filter/Buttons/DecibelButton",
   component: DecibelButton,
   tags: ["autodocs"],
   argTypes: {
-    iconSrc: {
-      control: "text",
-      description: "아이콘 이미지 경로 (public 폴더 기준)",
+    level: {
+      control: "select",
+      options: ["default", "quiet", "moderate", "loud"] satisfies DecibelIconLevel[],
+      description: "데시벨 단계 (아이콘 변경)",
     },
     label: {
       control: "text",
@@ -16,24 +18,20 @@ const meta: Meta<typeof DecibelButton> = {
     },
     active: {
       control: "boolean",
-      description: "버튼의 활성화 상태를 지정합니다.",
+      description: "버튼의 활성화 상태",
       defaultValue: false,
     },
     className: {
       control: "text",
-      description: "버튼 컨테이너에 추가할 커스텀 클래스",
-    },
-    iconClassName: {
-      control: "text",
-      description: "아이콘 컨테이너에 추가할 커스텀 클래스",
+      description: "버튼 컨테이너 커스텀 클래스",
     },
     textClassName: {
       control: "text",
-      description: "텍스트에 추가할 커스텀 클래스",
+      description: "텍스트 커스텀 클래스",
     },
-    onClick: { 
-        action: "clicked",
-        description: "버튼 클릭 시 실행될 핸들러", 
+    onClick: {
+      action: "clicked",
+      description: "버튼 클릭 시 실행될 핸들러",
     },
   },
 };
@@ -47,7 +45,7 @@ type Story = StoryObj<typeof DecibelButton>;
  */
 export const Quiet: Story = {
   args: {
-    iconSrc: "/icons/filter/decibel/quiet.svg",
+    level: "quiet",
     label: "0~70dB (조용함)",
     active: false,
   },
@@ -65,7 +63,7 @@ export const Quiet: Story = {
  */
 export const Moderate: Story = {
   args: {
-    iconSrc: "/icons/filter/decibel/moderate.svg",
+    level: "moderate",
     label: "70~100dB (보통)",
     active: true,
   },
@@ -83,7 +81,7 @@ export const Moderate: Story = {
  */
 export const Loud: Story = {
   args: {
-    iconSrc: "/icons/filter/decibel/loud.svg",
+    level: "loud",
     label: "100~120dB (시끄러움)",
     active: false,
   },
@@ -101,11 +99,10 @@ export const Loud: Story = {
  */
 export const CustomStyled: Story = {
   args: {
-    iconSrc: "/icons/filter/decibel/quiet.svg",
+    level: "quiet",
     label: "커스텀 버튼",
     active: true,
     className: "border-green-500 bg-green-50 hover:bg-green-100",
-    iconClassName: "w-[2rem] h-[2rem]",
     textClassName: "text-green-700 font-bold",
   },
   parameters: {

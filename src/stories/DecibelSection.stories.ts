@@ -40,9 +40,9 @@ export const DecibelFilterGroup: Story = {
     title: "소음 수준",
     allowMultiple: true,
     options: [
-      { label: "0~70dB (조용함)", iconSrc: "/icons/filter/decibel/quiet.svg" },
-      { label: "70~100dB (보통)", iconSrc: "/icons/filter/decibel/moderate.svg" },
-      { label: "100~120dB (시끄러움)", iconSrc: "/icons/filter/decibel/loud.svg" },
+      { label: "0~70dB (조용함)", decibelLv: "quiet" },
+      { label: "70~100dB (보통)", decibelLv: "moderate" },
+      { label: "100~120dB (시끄러움)", decibelLv: "loud" },
     ],
     selected: ["0~70dB (조용함)"],
   },

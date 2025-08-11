@@ -3,7 +3,7 @@ import DecibelButton from "../../buttons/decibelButton/DecibelButton";
 
 interface DecibelOption {
     label: string;       // 데시벨 이름
-    iconSrc: string;     // 데시벨 아이콘 경로
+    decibelLv: "default" | "quiet" | "moderate" | "loud";     // 데시벨 아이콘 경로
 }
 
 interface DecibelSectionProps {
@@ -42,7 +42,7 @@ export default function DecibelSection({
                     <li key={option.label} className={`${flexRow} items-center`}>
                         <DecibelButton
                             label={option.label}
-                            iconSrc={option.iconSrc}
+                            level={option.decibelLv}
                             active={
                                 allowMultiple
                                 ? (selected as string[]).includes(option.label)
