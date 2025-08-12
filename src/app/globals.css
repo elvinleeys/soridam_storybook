@@ -75,6 +75,8 @@
   /* Button / radii examples (you can tweak) */
   --radius-button-default: 5px;
   --radius-tag-button: 17.5px;
+
+  --shadow-modal: 0 0.480625rem 5.138125rem 0 #2548992B;
 }
 
 /* -----------------------
@@ -179,5 +181,9 @@ body {
 
   .text-light-black {
     color: var(--color-light-black);
+  }
+
+  .shadow-modal {
+    box-shadow: var(--shadow-modal);
   }
 }
