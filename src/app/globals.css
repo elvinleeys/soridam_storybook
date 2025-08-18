@@ -65,6 +65,7 @@
 
   /* Colors (from your config) */
   --color-neutral-black: #060606;
+  --color-primary: #007BFF;
   --color-primary-blue: #0070EB;
   --color-primary-red: #FF3131;
   --color-neutral-gray: #7B7B7B;
@@ -131,6 +132,10 @@ body {
     background-color: var(--color-neutral-black);
   }
 
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
   .bg-primary-blue {
     background-color: var(--color-primary-blue);
   }
@@ -157,6 +162,10 @@ body {
 
   .text-neutral-black {
     color: var(--color-neutral-black);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
   }
 
   .text-primary-blue {
