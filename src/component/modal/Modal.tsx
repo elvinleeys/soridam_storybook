@@ -10,11 +10,13 @@ export interface ModalProps {
 const overlayVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 const modalVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 30 },
 };
 
 export function Modal({ isOpen, onClose, children }: ModalProps) {
@@ -30,7 +32,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
             variants={overlayVariants}
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
           >
             <motion.div
               key="modal"
@@ -42,7 +44,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
               variants={modalVariants}
               initial="hidden"
               animate="visible"
-              exit="hidden"
+              exit="exit"
             >
               {children}
             </motion.div>
