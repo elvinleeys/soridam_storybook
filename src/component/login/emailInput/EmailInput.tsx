@@ -11,6 +11,7 @@ export default function EmailInput({
     value, 
     onChange, 
     placeholder = "이메일",
+    ...props
 } : EmailInputProps ) {
 
     return(
@@ -35,6 +36,7 @@ export default function EmailInput({
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
+                {...props}
                 className="
                     flex-1
                     font-regular
