@@ -28,7 +28,7 @@ export default function InfoBtn({
       onClick={onClick}
       aria-label="정보 버튼"
     >
-      <Image src="/icons/info-ico.svg" alt="info button" fill />
+      <Image src="/icons/info-ico.svg" alt="info button" fill priority/>
     </button>
   );
 }

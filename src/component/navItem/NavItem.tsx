@@ -50,7 +50,7 @@ export default function NavItem({
                             transition={{ duration: 0.18 }}
                             className="absolute inset-0"
                         >
-                            <Image src={img.activeIcon} alt={img.iconLabel} fill />
+                            <Image src={img.activeIcon} alt={img.iconLabel} fill priority/>
                         </motion.div>
                     ) : (
                         <motion.div
@@ -61,7 +61,7 @@ export default function NavItem({
                             transition={{ duration: 0.18 }}
                             className="absolute inset-0"
                         >
-                            <Image src={img.icon} alt={img.iconLabel} fill />
+                            <Image src={img.icon} alt={img.iconLabel} fill priority/>
                         </motion.div>
                     )}
                 </AnimatePresence>

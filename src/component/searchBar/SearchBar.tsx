@@ -35,7 +35,7 @@ export default function SearchBar({
             `}
         >
             <div className="w-[1.5rem] h-[1.5rem] relative">
-                <Image src="/icons/search-ico.svg" alt="search-icon" fill />
+                <Image src="/icons/search-ico.svg" alt="search-icon" fill priority/>
             </div>
             <input 
                 type="search" 

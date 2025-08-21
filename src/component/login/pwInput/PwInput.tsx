@@ -38,7 +38,7 @@ export default function PwInput({
             `}
         >
             <div className="w-[1.125rem] h-[1.125rem] relative">
-                <Image src="/icons/login/password-ico.svg" alt="password icon" fill /> 
+                <Image src="/icons/login/password-ico.svg" alt="password icon" fill priority/> 
             </div>
             <input 
                 type={showPassword ? "text" : "password"}
@@ -81,6 +81,7 @@ export default function PwInput({
                                         src="/icons/login/pw-open-ico.svg"
                                         alt="password show"
                                         fill
+                                        priority
                                     />
                                 </motion.div>
                             ) : (
@@ -96,6 +97,7 @@ export default function PwInput({
                                         src="/icons/login/pw-close-ico.svg"
                                         alt="password hide"
                                         fill
+                                        priority
                                     />
                                 </motion.div>
                             )}

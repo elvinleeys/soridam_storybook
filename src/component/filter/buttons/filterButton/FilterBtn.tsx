@@ -35,7 +35,7 @@ export default function FilterBtn({
             aria-label={label}
         >
             <div className="w-[1.5rem] h-[1.5rem] relative">
-                <Image src={iconSrc} alt="filterIcon" fill />
+                <Image src={iconSrc} alt="filterIcon" fill priority/>
             </div>
             <p className={`text-base font-regular ${textClassName}`}>
                 {label}

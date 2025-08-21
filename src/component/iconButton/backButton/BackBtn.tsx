@@ -29,6 +29,7 @@ export default function BackButton({
       src="/icons/back-ico.svg"
       alt="back button"
       fill
+      priority
     />
   );
 

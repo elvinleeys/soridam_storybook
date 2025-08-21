@@ -35,7 +35,7 @@ export default function Decibel({
 
     return (
         <div className={`relative ${sizeClass} ${iconClassName}`}>
-            <Image src={iconSrc} alt={`${level} decibel level icon`} fill />
+            <Image src={iconSrc} alt={`${level} decibel level icon`} fill priority/>
         </div>
     );
 }

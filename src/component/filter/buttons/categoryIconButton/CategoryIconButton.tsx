@@ -48,7 +48,7 @@ export default function CategoryIconButton({
                         ${flexRowCenter}
                     `}
                 >
-                    <Image src={iconSrc} alt="" fill />
+                    <Image src={iconSrc} alt={`${label}`} fill priority/>
                 </div>
                 <p
                     className={`
