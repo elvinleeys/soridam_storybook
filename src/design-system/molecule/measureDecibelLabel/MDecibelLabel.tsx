@@ -1,7 +1,7 @@
 "use client";
 
 import { flexCol } from "@/mixin/style";
-import Decibel from "../decibelLevel/Decibel";
+import Decibel from "@/design-system/atom/decibelLevel/Decibel";
 
 type DecibelLevel = "default" | "quiet" | "moderate" | "loud";
 

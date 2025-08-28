@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import RadiusButton from '../component/filter/buttons/radiusButton/RadiusButton';
+import RadiusButton from '../design-system/atom/radiusButton/RadiusButton';
 
 // 👇 기본 메타 설정
 const meta: Meta<typeof RadiusButton> = {
-  title: 'Filter/Buttons/RadiusButton',
+  title: 'Atom/Filter/RadiusButton',
   component: RadiusButton,
   tags: ['autodocs'],
   argTypes: {

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import CategoryIconButton from "../component/filter/buttons/categoryIconButton/CategoryIconButton";
+import CategoryIconButton from "../design-system/atom/categoryIconButton/CategoryIconButton";
 
 const meta: Meta<typeof CategoryIconButton> = {
-    title: "Filter/Buttons/CategoryIconButton",
+    title: "Atom/Filter/CategoryIconButton",
     component: CategoryIconButton,
     tags: ["autodocs"],
     argTypes: {

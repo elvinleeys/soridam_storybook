@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import OneLineReviewInput from "../component/comment/OneLineReviewInput";
+import OneLineReviewInput from "../design-system/atom/comment/OneLineReviewInput";
 
 const meta: Meta<typeof OneLineReviewInput> = {
-  title: "Components/Form/OneLineReviewInput",
+  title: "Atom/OneLineReviewInput",
   component: OneLineReviewInput,
   tags: ['autodocs'],
   argTypes: {

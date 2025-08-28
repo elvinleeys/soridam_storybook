@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { NoiseMeterChart } from "../component/chart/noiseMeterChart/NoiseMeterChart";
+import { NoiseMeterChart } from "../design-system/atom/chart/noiseMeterChart/NoiseMeterChart";
 
 const meta: Meta<typeof NoiseMeterChart> = {
-  title: "Chart/NoiseMeterChart",
+  title: "Atom/Chart/NoiseMeterChart",
   component: NoiseMeterChart,
   tags: ["autodocs"],
   argTypes: {

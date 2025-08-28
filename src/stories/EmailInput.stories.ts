@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import EmailInput from "../component/login/emailInput/EmailInput";
+import EmailInput from "../design-system/atom/emailInput/EmailInput";
 
 const meta: Meta<typeof EmailInput> = {
-  title: "Login/EmailInput",
+  title: "Atom/Login/EmailInput",
   component: EmailInput,
   tags: ["autodocs"],
   argTypes: {

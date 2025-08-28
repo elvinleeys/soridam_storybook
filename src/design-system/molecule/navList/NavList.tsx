@@ -1,7 +1,7 @@
 'use client';
 
+import NavItem from "@/design-system/atom/navItem/NavItem";
 import { flexRow, flexRowCenter } from "@/mixin/style";
-import NavItem from "../navItem/NavItem";
 import { motion } from "framer-motion";
 
 export interface NavListItem {

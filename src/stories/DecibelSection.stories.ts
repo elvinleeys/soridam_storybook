@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import DecibelSection from '../component/filter/sections/decibelSection/DecibelSection';
+import DecibelSection from '../design-system/filter/sections/decibelSection/DecibelSection';
 
 const meta: Meta<typeof DecibelSection> = {
   title: 'Filter/Sections/DecibelSection',

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import BackBtn from "../component/iconButton/backButton/BackBtn";
+import BackBtn from "../design-system/atom/iconButton/backButton/BackBtn";
 
 const meta: Meta<typeof BackBtn> = {
-  title: 'Components/IconButton/BackButton',
+  title: 'Atom/IconButton/BackButton',
   component: BackBtn,
   tags: ['autodocs'],
   argTypes: {

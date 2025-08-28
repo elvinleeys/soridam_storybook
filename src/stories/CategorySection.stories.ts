@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import CategorySection from '../component/filter/sections/categorySection/CategorySection';
+import CategorySection from '../design-system/filter/sections/categorySection/CategorySection';
 
 const meta: Meta<typeof CategorySection> = {
   title: 'Filter/Sections/CategorySection',

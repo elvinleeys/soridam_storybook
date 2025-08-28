@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import SearchBar from "../component/searchBar/SearchBar";
+import SearchBar from "../design-system/atom/searchBar/SearchBar";
 
 const meta: Meta<typeof SearchBar> = {
-  title: "Components/SearchBar",
+  title: "Atom/SearchBar",
   component: SearchBar,
   tags: ["autodocs"],
   argTypes: {

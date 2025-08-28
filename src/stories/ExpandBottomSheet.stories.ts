@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import { ExpandBottomSheet } from '../component/expandBottomSheet/ExpandBottomSheet';
+import { ExpandBottomSheet } from '../design-system/molecule/expandBottomSheet/ExpandBottomSheet';
 
 const meta: Meta<typeof ExpandBottomSheet> = {
-    title: 'Components/ExpandBottomSheet',
+    title: 'Molecule/ExpandBottomSheet',
     component: ExpandBottomSheet,
     tags: ['autodocs'],
     argTypes: {

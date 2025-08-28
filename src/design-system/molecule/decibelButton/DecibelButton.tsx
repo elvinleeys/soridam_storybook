@@ -1,7 +1,7 @@
 "use client";
 
 import { flexRowCenter } from "@/mixin/style";
-import Decibel, { DecibelIconLevel } from "@/component/decibel/decibelLevel/Decibel";
+import Decibel, { DecibelIconLevel } from "@/design-system/atom/decibelLevel/Decibel";
 
 type DecibelButtonProps = {
     level: DecibelIconLevel; // 데시벨 단계

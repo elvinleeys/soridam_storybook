@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import NavList, { NavListItem } from '../component/navList/NavList';
+import NavList, { NavListItem } from '../design-system/molecule/navList/NavList';
 
 const meta: Meta<typeof NavList> = {
-  title: 'Components/NavList',
+  title: 'Molecule/NavList',
   component: NavList,
   tags: ['autodocs'],
   argTypes: {

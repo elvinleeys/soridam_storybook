@@ -1,5 +1,5 @@
 import { flexCol, flexRow, flexRowCenter } from "@/mixin/style";
-import DecibelButton from "../../buttons/decibelButton/DecibelButton";
+import DecibelButton from "@/design-system/molecule/decibelButton/DecibelButton";
 
 interface DecibelOption {
     label: string;       // 데시벨 이름

@@ -1,3 +1,5 @@
+"use client";
+
 import { flexColCenter } from '@/mixin/style';
 import { AnimatePresence, motion } from 'framer-motion';
 

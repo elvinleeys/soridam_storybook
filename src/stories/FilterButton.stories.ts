@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import FilterBtn from '../component/filter/buttons/filterButton/FilterBtn';
+import FilterBtn from '../design-system/atom/filterButton/FilterBtn';
 
 const meta: Meta<typeof FilterBtn> = {
-  title: 'Filter/Buttons/FilterButton',
+  title: 'Atom/FilterButton',
   component: FilterBtn,
   tags: ['autodocs'],
   argTypes: {

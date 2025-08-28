@@ -1,5 +1,5 @@
 import { flexCol, flexRow, flexRowCenter } from "@/mixin/style";
-import CategoryIconButton from "../../buttons/categoryIconButton/CategoryIconButton";
+import CategoryIconButton from "@/design-system/atom/categoryIconButton/CategoryIconButton";
 import Image from "next/image";
 
 interface CategoryOption {

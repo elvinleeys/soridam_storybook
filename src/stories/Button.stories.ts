@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import { Button } from '../component/button/Button'; // Button 컴포넌트의 실제 경로에 맞게 수정해주세요.
+import { Button } from '../design-system/atom/button/Button'; // Button 컴포넌트의 실제 경로에 맞게 수정해주세요.
 
 // Button 컴포넌트에 대한 메타데이터를 정의합니다.
 // Storybook UI에서 'Components/Button'으로 표시됩니다.
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+  title: 'Atom/Button',
   component: Button,
   tags: ['autodocs'], // Storybook 문서 자동 생성 기능을 활성화합니다.
   argTypes: {

@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import NavItem from '../component/navItem/NavItem';
+import NavItem from '../design-system/atom/navItem/NavItem';
 
 
 const meta: Meta<typeof NavItem> = {
-  title: 'Components/NavItem',
+  title: 'Atom/NavItem',
   component: NavItem,
   tags: ['autodocs'],
   argTypes: {

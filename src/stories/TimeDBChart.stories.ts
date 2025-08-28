@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
-import { TimeDBChart, TimeDBChartProps } from "../component/chart/timeDBChart/TimeDBChart";
+import { TimeDBChart, TimeDBChartProps } from "../design-system/atom/chart/timeDBChart/TimeDBChart";
 
 const meta: Meta<typeof TimeDBChart> = {
-    title: "Chart/TimeDBChart",
+    title: "Atom/Chart/TimeDBChart",
     component: TimeDBChart,
     tags: ["autodocs"],
     argTypes: {

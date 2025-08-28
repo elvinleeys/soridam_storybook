@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import Logo from "../component/logo/Logo";
+import Logo from "../design-system/atom/logo/Logo";
 
 const meta: Meta<typeof Logo> = {
-  title: "Components/Logo",
+  title: "Atom/Logo",
   component: Logo,
   tags: ["autodocs"],
   argTypes: {

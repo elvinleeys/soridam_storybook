@@ -1,5 +1,5 @@
 import { flexCol } from "@/mixin/style";
-import RadiusButton from "../../buttons/radiusButton/RadiusButton";
+import RadiusButton from "@/design-system/atom/radiusButton/RadiusButton";
 
 interface RadiusFilterGroupProps {
     title: string; // section title

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import BottomSheet from '../component/bottomSheet/BottomSheet';
+import BottomSheet from '../design-system/molecule/bottomSheet/BottomSheet';
 
 const meta: Meta<typeof BottomSheet> = {
-  title: 'Components/BottomSheet',
+  title: 'Molecule/BottomSheet',
   component: BottomSheet,
   tags: ['autodocs'],
   argTypes: {

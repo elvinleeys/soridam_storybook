@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/nextjs";
-import StepIndicator from "../component/signup/stepIndicator/StepIndicator";
+import StepIndicator from "../design-system/atom/stepIndicator/StepIndicator";
 
 const meta: Meta<typeof StepIndicator> = {
-  title: "SignUp/StepIndicator",
+  title: "Atom/SignUp/StepIndicator",
   component: StepIndicator,
   tags: ["autodocs"],
   argTypes: {

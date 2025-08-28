@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import { Modal } from '../component/modal/Modal';
+import { Modal } from '../design-system/molecule/modal/Modal';
 
 const meta: Meta<typeof Modal> = {
-  title: 'Components/Modal',
+  title: 'Molecule/Modal',
   component: Modal,
   tags: ['autodocs'],
   argTypes: {

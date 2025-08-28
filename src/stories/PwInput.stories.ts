@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import PwInput from "../component/login/pwInput/PwInput";
+import PwInput from "../design-system/atom/pwInput/PwInput";
 
 const meta: Meta<typeof PwInput> = {
-  title: "Login/PwInput",
+  title: "Atom/Login/PwInput",
   component: PwInput,
   tags: ["autodocs"],
   argTypes: {

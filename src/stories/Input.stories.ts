@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import Input from "../component/signup/input/Input";
+import Input from "../design-system/atom/input/Input";
 
 const meta: Meta<typeof Input> = {
-  title: "SignUp/Input",
+  title: "Atom/SignUp/Input",
   component: Input,
   tags: ["autodocs"],
   argTypes: {

@@ -74,7 +74,7 @@ export default function OneLineReviewInput({
                     ${isMax ? "text-[#FF3131]" : "text-[#757575]"}
                 `}
             >
-                {value.length}/{maxLength}
+                {value.length} / {maxLength}
             </div>
         )}
     </div>

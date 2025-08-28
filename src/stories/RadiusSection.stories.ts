@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import RadiusSection from '../component/filter/sections/radiusSection/RadiusSection';
+import RadiusSection from '../design-system/filter/sections/radiusSection/RadiusSection';
 
 const meta: Meta<typeof RadiusSection> = {
   title: 'Filter/Sections/RadiusSection',

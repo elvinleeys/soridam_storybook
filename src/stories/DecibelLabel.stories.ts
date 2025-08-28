@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import DecibelLabel from "../component/decibel/decibelLabel/DecibelLabel";
+import DecibelLabel from "../design-system/molecule/decibelLabel/DecibelLabel";
 
 const meta: Meta<typeof DecibelLabel> = {
-  title: "Components/Decibels/DecibelLabel",
+  title: "Molecule/DecibelLabel",
   component: DecibelLabel,
   tags: ["autodocs"],
   argTypes: {

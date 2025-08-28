@@ -3,7 +3,7 @@
 import { flexRow } from "@/mixin/style";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { useEffect, useState } from "react";
-import BackButton from "../iconButton/backButton/BackBtn";
+import BackButton from "@/design-system/atom/iconButton/backButton/BackBtn";
 
 export interface ExpandBottomSheetProps {
   title: string;
