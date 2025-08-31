@@ -33,7 +33,7 @@ export default function CategoryIconButton({
                 border 
                 px-[1rem]
                 py-[0.625rem] 
-                ${active ? "border-primary-blue bg-[#F5F5F5]" : "border-[#808080] bg-white"} 
+                ${active ? "border-primary-blue bg-neutral-gray-bg" : "border-neutral-gray-soft bg-white"} 
                 ${className}
                 ${flexRowCenter}
             `}

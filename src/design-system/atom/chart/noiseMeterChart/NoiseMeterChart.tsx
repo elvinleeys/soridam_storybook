@@ -7,7 +7,7 @@ interface NoiseMeterChartProps {
   time: string;        // "00:15" 또는 "+00:03"
 }
 
-export function NoiseMeterChart({ 
+export default function NoiseMeterChart({ 
   db, 
   time 
 }: NoiseMeterChartProps) {
@@ -38,7 +38,7 @@ export function NoiseMeterChart({
             text-[4.375rem] 
             leading-[3.875rem] 
             tracking-[0.125rem] 
-            text-[#000000]
+            text-black
           `}
         >
           {displayDb}
@@ -51,7 +51,7 @@ export function NoiseMeterChart({
             -translate-x-1/2
             text-sm 
             font-medium
-            text-[#6D6D6D]
+            text-neutral-sub
             mt-[1.125rem]
           `}
         >

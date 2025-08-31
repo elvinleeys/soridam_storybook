@@ -7,7 +7,7 @@ const buttonStyles = {
   primary: "bg-primary-blue text-white",
   secondary: "bg-neutral-gray text-white",
   tertiary: "bg-white text-primary-blue border-[0.054375rem] border-primary-blue", 
-  ghost: "bg-white text-[#757575] border-none", // 배경이 흰색, 글씨가 #808080
+  ghost: "bg-white text-neutral-gray-light border-none", // 배경이 흰색, 글씨가 #808080
 };
 
 // 버튼 크기에 따른 Tailwind 클래스를 미리 정의
@@ -38,14 +38,14 @@ export interface ButtonProps {
 }
 
 /** Primary UI component for user interaction */
-export const Button = ({
+export default function Button({
   buttonType = 'primary',
   size = 'large',
   children,
   onClick,
   className,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   // 공통적으로 사용되는 폰트 스타일 및 중앙 정렬 클래스
   const commonStyles = `${flexRowCenter}`;
   

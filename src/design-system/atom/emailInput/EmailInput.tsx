@@ -24,7 +24,7 @@ export default function EmailInput({
                 ${flexRow}
                 items-center
                 gap-[0.5rem]
-                bg-[#F5F5F5]
+                bg-neutral-gray-bg
                 rounded-[0.5rem]
             `}
         >

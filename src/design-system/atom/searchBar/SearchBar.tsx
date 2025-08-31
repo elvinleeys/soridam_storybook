@@ -29,9 +29,9 @@ export default function SearchBar({
                 ${flexRow}
                 items-center
                 gap-[0.5rem]
-                bg-[#F5F5F5]
+                bg-neutral-gray-bg
                 rounded-[6.25rem] 
-                border border-[#808080]
+                border border-neutral-gray-soft
             `}
         >
             <div className="w-[1.5rem] h-[1.5rem] relative">

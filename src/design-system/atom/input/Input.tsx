@@ -39,8 +39,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           py-[0.625rem]
           px-[0.75rem]
           rounded-[0.5rem]
-          bg-[#F5F5F5]
-          ${hasError ? "border border-[#FF3131]" : "border-none"}
+          bg-neutral-gray-bg
+          ${hasError ? "border border-error" : "border-none"}
         `}
       >
         <input

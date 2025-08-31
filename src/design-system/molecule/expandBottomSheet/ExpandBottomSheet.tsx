@@ -19,7 +19,7 @@ const EXPAND_THRESHOLD_REM = 7.5;     // 120px
 const DISMISS_THRESHOLD_REM = 6.25;   // 100px
 const SNAP_RATIO = 0.6;
 
-export function ExpandBottomSheet({
+export default function ExpandBottomSheet({
   title,
   isOpen,
   onClose,

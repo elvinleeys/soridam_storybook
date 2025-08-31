@@ -45,8 +45,8 @@ export default function OneLineReviewInput({
                     rounded-[0.42rem] 
                     resize-none 
                     outline-none 
-                    bg-[#F5F5F5]
-                    border ${showError ? "border-[#FF3131]" : "border-[#808080]"}
+                    bg-neutral-gray-bg 
+                    border ${showError ? "border-error" : "border-neutral-gray-soft"}
                     text-sm 
                     placeholder-[#808080]
                 `}
@@ -60,7 +60,7 @@ export default function OneLineReviewInput({
                     text-right 
                     text-sm 
                     font-regular 
-                    ${submitAttempted ? "text-[#FF3131]" : "text-[#757575]"}
+                    ${submitAttempted ? "text-error" : "text-neutral-gray-light"}
                 `}
             >
                 한 줄평을 입력해야 등록할 수 있습니다.
@@ -71,7 +71,7 @@ export default function OneLineReviewInput({
                     text-right 
                     text-sm 
                     font-regular 
-                    ${isMax ? "text-[#FF3131]" : "text-[#757575]"}
+                    ${isMax ? "text-error" : "text-neutral-gray-light"}
                 `}
             >
                 {value.length} / {maxLength}

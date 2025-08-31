@@ -15,7 +15,7 @@ export interface TimeDBChartProps {
   currentRange: string;
 }
 
-export function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
+export default function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
   const barRadius = 10.62; // px 값 그대로 사용
   
   // Recharts에서 라벨을 렌더링하기 위한 커스텀 함수

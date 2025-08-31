@@ -32,7 +32,7 @@ export default function MDecibelLabel({ level }: MeasureDecibelLabelProps) {
                 className={`
                     text-xl 
                     font-bold 
-                    ${level === "default" ? "text-sub-gray" : "text-primary"}
+                    ${level === "default" ? "text-neutral-sub" : "text-primary"}
                 `}
             >
                 {labelMap[level]}

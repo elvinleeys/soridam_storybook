@@ -21,7 +21,7 @@ const modalVariants = {
   exit: { opacity: 0, y: 30 },
 };
 
-export function Modal({ isOpen, onClose, children }: ModalProps) {
+export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
   return (
     <AnimatePresence>

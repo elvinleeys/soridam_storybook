@@ -26,8 +26,8 @@ export default function FilterBtn({
                 min-w-[4.375rem] 
                 min-h-[2.5rem]
                 py-[0.25rem] px-[0.3125rem]
-                bg-[#F5F5F5] 
-                border border-[#808080]
+                bg-neutral-gray-bg 
+                border border-neutral-gray-soft
                 ${flexRowCenter}
                 gap-[0.5rem]
                 ${className}

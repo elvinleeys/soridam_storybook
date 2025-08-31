@@ -22,9 +22,9 @@ export default function RadiusButton({
 
   // 활성/비활성 스타일 분리
   const activeStyles =
-    'border border-[#007BFF] text-[#0062FF] bg-[#F5F5F5]';
+    'border border-primary text-primary-blue-strong bg-neutral-gray-bg';
   const inactiveStyles =
-    'border border-[#808080] text-[#727272] bg-white';
+    'border border-neutral-gray-soft text-neutral-gray-sub bg-white';
 
   const buttonStyle = active ? activeStyles : inactiveStyles;
 

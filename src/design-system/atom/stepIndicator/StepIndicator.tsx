@@ -29,7 +29,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
                     rounded-full 
                     transition-colors 
                     duration-300
-                    ${isActive ? "bg-primary" : "bg-[#F5F5F5]"}
+                    ${isActive ? "bg-primary" : "bg-neutral-gray-bg"}
                 `}
             ></div>
           </React.Fragment>

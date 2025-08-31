@@ -31,7 +31,7 @@ export default function DecibelButton({
                 border 
                 px-[1rem]
                 py-[0.625rem] 
-                ${active ? "border-primary-blue bg-[#F5F5F5]" : "border-[#808080] bg-white"} 
+                ${active ? "border-primary bg-neutral-gray-bg" : "border-neutral-gray-soft bg-white"} 
                 ${className}
                 ${flexRowCenter}
             `}
@@ -42,7 +42,7 @@ export default function DecibelButton({
                     className={`
                         text-sm
                         font-regular 
-                        ${active ? "text-[#0062FF]" : "text-[#727272]"} 
+                        ${active ? "text-primary-blue-strong" : "text-neutral-gray-sub"} 
                         ${flexRowCenter}
                         ${textClassName}
                     `}
