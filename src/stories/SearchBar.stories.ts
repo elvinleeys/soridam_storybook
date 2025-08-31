@@ -5,6 +5,9 @@ const meta: Meta<typeof SearchBar> = {
   title: "Atom/SearchBar",
   component: SearchBar,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     value: { 
       control: "text", 

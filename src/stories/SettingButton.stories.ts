@@ -5,6 +5,9 @@ const meta: Meta<typeof SettingBtn> = {
   title: 'Atom/IconButton/SettingButton',
   component: SettingBtn,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     size: {
       control: { type: "radio" },

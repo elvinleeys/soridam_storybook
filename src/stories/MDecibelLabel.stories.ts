@@ -5,6 +5,9 @@ const meta: Meta<typeof MDecibelLabel> = {
     title: "Molecule/Measure/MDecibelLabel",
     component: MDecibelLabel,
     tags: ["autodocs"],
+    parameters: {
+      layout: "centered",
+    },
     argTypes: {
         level: {
         control: "radio",

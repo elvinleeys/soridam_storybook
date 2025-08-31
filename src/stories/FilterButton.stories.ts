@@ -5,6 +5,9 @@ const meta: Meta<typeof FilterBtn> = {
   title: 'Atom/FilterButton',
   component: FilterBtn,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     label: { control: 'text', description: '버튼 하단 텍스트' },
     iconSrc: { control: 'text', description: '버튼 아이콘 경로' },

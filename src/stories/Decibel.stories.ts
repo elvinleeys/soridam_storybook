@@ -5,6 +5,9 @@ const meta: Meta<typeof Decibel> = {
   title: "Atom/DecibelIcon",
   component: Decibel,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     level: {
         control: { type: "select" },

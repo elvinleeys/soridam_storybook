@@ -5,6 +5,9 @@ const meta: Meta<typeof InfoBtn> = {
   title: 'Atom/IconButton/InfoButton',
   component: InfoBtn,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     size: {
       control: { type: "radio" },

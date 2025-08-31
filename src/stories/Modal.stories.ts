@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import { Modal } from '../design-system/molecule/modal/Modal';
+import Modal from '../design-system/molecule/modal/Modal';
 
 const meta: Meta<typeof Modal> = {
   title: 'Molecule/Modal',

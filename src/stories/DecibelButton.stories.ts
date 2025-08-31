@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import DecibelButton from "../design-system/molecule/decibelButton/DecibelButton";
-import { DecibelIconLevel } from "@/design-system/atom/decibelLevel/Decibel";
+import { DecibelIconLevel } from "../design-system/atom/decibelLevel/Decibel";
 
 const meta: Meta<typeof DecibelButton> = {
   title: "Molecule/Filter/DecibelButton",
   component: DecibelButton,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     level: {
       control: "select",

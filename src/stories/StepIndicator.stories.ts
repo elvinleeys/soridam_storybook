@@ -5,6 +5,9 @@ const meta: Meta<typeof StepIndicator> = {
   title: "Atom/SignUp/StepIndicator",
   component: StepIndicator,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     totalSteps: { 
         control: "number",

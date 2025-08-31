@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/nextjs';
-import { ExpandBottomSheet } from '../design-system/molecule/expandBottomSheet/ExpandBottomSheet';
+import ExpandBottomSheet from '../design-system/molecule/expandBottomSheet/ExpandBottomSheet';
 
 const meta: Meta<typeof ExpandBottomSheet> = {
     title: 'Molecule/ExpandBottomSheet',

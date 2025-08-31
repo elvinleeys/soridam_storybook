@@ -6,6 +6,9 @@ const meta: Meta<typeof NavItem> = {
   title: 'Atom/NavItem',
   component: NavItem,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     href: {
         control: "text",

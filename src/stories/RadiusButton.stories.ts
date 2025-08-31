@@ -6,6 +6,9 @@ const meta: Meta<typeof RadiusButton> = {
   title: 'Atom/Filter/RadiusButton',
   component: RadiusButton,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     label: {
       control: 'text',

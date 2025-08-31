@@ -5,6 +5,9 @@ const meta: Meta<typeof BottomSheet> = {
   title: 'Molecule/BottomSheet',
   component: BottomSheet,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     isOpen: {
       control: 'boolean',

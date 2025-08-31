@@ -5,6 +5,9 @@ const meta: Meta<typeof BackBtn> = {
   title: 'Atom/IconButton/BackButton',
   component: BackBtn,
   tags: ['autodocs'],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     size: {
       control: { type: "radio" },

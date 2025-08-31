@@ -5,6 +5,9 @@ const meta: Meta<typeof CategoryIconButton> = {
     title: "Atom/Filter/CategoryIconButton",
     component: CategoryIconButton,
     tags: ["autodocs"],
+    parameters: {
+      layout: "centered",
+    },
     argTypes: {
         iconSrc: {
             control: "text",

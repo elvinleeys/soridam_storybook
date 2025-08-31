@@ -5,6 +5,9 @@ const meta: Meta<typeof Logo> = {
   title: "Atom/Logo",
   component: Logo,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     size: {
       control: { type: "radio" },
