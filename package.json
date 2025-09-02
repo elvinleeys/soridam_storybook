@@ -18,132 +18,7 @@
       "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/index.css",
-    "./atom/button": {
-      "import": "./dist/atom/button/index.js",
-      "require": "./dist/atom/button/index.js",
-      "types": "./dist/atom/button/index.d.ts"
-    },
-    "./atom/categoryIconButton": {
-      "import": "./dist/atom/categoryIconButton/index.js",
-      "require": "./dist/atom/categoryIconButton/index.js",
-      "types": "./dist/atom/categoryIconButton/index.d.ts"
-    },
-    "./atom/chart/noiseMeterChart": {
-      "import": "./dist/atom/chart/noiseMeterChart/index.js",
-      "require": "./dist/atom/chart/noiseMeterChart/index.js",
-      "types": "./dist/atom/chart/noiseMeterChart/index.d.ts"
-    },
-    "./atom/chart/timeDBChart": {
-      "import": "./dist/atom/chart/timeDBChart/index.js",
-      "require": "./dist/atom/chart/timeDBChart/index.js",
-      "types": "./dist/atom/chart/timeDBChart/index.d.ts"
-    },
-    "./atom/comment": {
-      "import": "./dist/atom/comment/index.js",
-      "require": "./dist/atom/comment/index.js",
-      "types": "./dist/atom/comment/index.d.ts"
-    },
-    "./atom/decibelLevel": {
-      "import": "./dist/atom/decibelLevel/index.js",
-      "require": "./dist/atom/decibelLevel/index.js",
-      "types": "./dist/atom/decibelLevel/index.d.ts"
-    },
-    "./atom/emailInput": {
-      "import": "./dist/atom/emailInput/index.js",
-      "require": "./dist/atom/emailInput/index.js",
-      "types": "./dist/atom/emailInput/index.d.ts"
-    },
-    "./atom/filterButton": {
-      "import": "./dist/atom/filterButton/index.js",
-      "require": "./dist/atom/filterButton/index.js",
-      "types": "./dist/atom/filterButton/index.d.ts"
-    },
-    "./atom/iconButton/backButton": {
-      "import": "./dist/atom/iconButton/backButton/index.js",
-      "require": "./dist/atom/iconButton/backButton/index.js",
-      "types": "./dist/atom/iconButton/backButton/index.d.ts"
-    },
-    "./atom/iconButton/infoButton": {
-      "import": "./dist/atom/iconButton/infoButton/index.js",
-      "require": "./dist/atom/iconButton/infoButton/index.js",
-      "types": "./dist/atom/iconButton/infoButton/index.d.ts"
-    },
-    "./atom/iconButton/settingButton": {
-      "import": "./dist/atom/iconButton/settingButton/index.js",
-      "require": "./dist/atom/iconButton/settingButton/index.js",
-      "types": "./dist/atom/iconButton/settingButton/index.d.ts"
-    },
-    "./atom/input": {
-      "import": "./dist/atom/input/index.js",
-      "require": "./dist/atom/input/index.js",
-      "types": "./dist/atom/input/index.d.ts"
-    },
-    "./atom/logo": {
-      "import": "./dist/atom/logo/index.js",
-      "require": "./dist/atom/logo/index.js",
-      "types": "./dist/atom/logo/index.d.ts"
-    },
-    "./atom/navItem": {
-      "import": "./dist/atom/navItem/index.js",
-      "require": "./dist/atom/navItem/index.js",
-      "types": "./dist/atom/navItem/index.d.ts"
-    },
-    "./atom/pwInput": {
-      "import": "./dist/atom/pwInput/index.js",
-      "require": "./dist/atom/pwInput/index.js",
-      "types": "./dist/atom/pwInput/index.d.ts"
-    },
-    "./atom/radiusButton": {
-      "import": "./dist/atom/radiusButton/index.js",
-      "require": "./dist/atom/radiusButton/index.js",
-      "types": "./dist/atom/radiusButton/index.d.ts"
-    },
-    "./atom/searchBar": {
-      "import": "./dist/atom/searchBar/index.js",
-      "require": "./dist/atom/searchBar/index.js",
-      "types": "./dist/atom/searchBar/index.d.ts"
-    },
-    "./atom/stepIndicator": {
-      "import": "./dist/atom/stepIndicator/index.js",
-      "require": "./dist/atom/stepIndicator/index.js",
-      "types": "./dist/atom/stepIndicator/index.d.ts"
-    },
-    "./molecule/bottomSheet": {
-      "import": "./dist/molecule/bottomSheet/index.js",
-      "require": "./dist/molecule/bottomSheet/index.js",
-      "types": "./dist/molecule/bottomSheet/index.d.ts"
-    },
-    "./molecule/decibelButton": {
-      "import": "./dist/molecule/decibelButton/index.js",
-      "require": "./dist/molecule/decibelButton/index.js",
-      "types": "./dist/molecule/decibelButton/index.d.ts"
-    },
-    "./molecule/decibelLabel": {
-      "import": "./dist/molecule/decibelLabel/index.js",
-      "require": "./dist/molecule/decibelLabel/index.js",
-      "types": "./dist/molecule/decibelLabel/index.d.ts"
-    },
-    "./molecule/expandBottomSheet": {
-      "import": "./dist/molecule/expandBottomSheet/index.js",
-      "require": "./dist/molecule/expandBottomSheet/index.js",
-      "types": "./dist/molecule/expandBottomSheet/index.d.ts"
-    },
-    "./molecule/measureDecibelLabel": {
-      "import": "./dist/molecule/measureDecibelLabel/index.js",
-      "require": "./dist/molecule/measureDecibelLabel/index.js",
-      "types": "./dist/molecule/measureDecibelLabel/index.d.ts"
-    },
-    "./molecule/modal": {
-      "import": "./dist/molecule/modal/index.js",
-      "require": "./dist/molecule/modal/index.js",
-      "types": "./dist/molecule/modal/index.d.ts"
-    },
-    "./molecule/navList": {
-      "import": "./dist/molecule/navList/index.js",
-      "require": "./dist/molecule/navList/index.js",
-      "types": "./dist/molecule/navList/index.d.ts"
-    }
+    "./styles": "./dist/index.css"
   },
   "scripts": {
     "dev:app": "next dev",
@@ -152,8 +27,6 @@
     "build:ts": "tsup",
     "build:css": "npx tailwindcss -i ./src/globals.css -o ./dist/index.css --content './src/**/*.{ts,tsx}' --minify",
     "build": "npm run build:ts && npm run build:css",
-    "prebuild": "npm run gen:index",
-    "gen:index": "tsx scripts/generate-components.ts",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

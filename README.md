@@ -7,6 +7,7 @@
 - [Tech Stack](#tech-stack)
 - [Installation](#-installation)
 - [Usage](#-usage)
+- [Update](#update)
 
 ## Storybook
 storybook : [https://68b18c520a82ac63f9524bc5-rueqmotjmh.chromatic.com/?path=/docs/configure-your-project--docs]
@@ -83,12 +84,8 @@ export default function Example() {
 }
 ```
 
-- 예시(ES module)
-```tsx
-import { Button } from "soridam-design-system/atom/button/Button";
 
-export default function Example() {
-  return <Button buttonType="primary" size="large">Click Me</Button>;
-}
-```
+## Update
+2025.09.03</br>
+빌드 시 Node.js 메모리 부족으로 인한 Entry point 하나로 간략화
 

@@ -17,7 +17,7 @@ export default defineConfig({
     "tailwindcss",
   ],
   outDir: "dist",
-  bundle: true,
+  bundle: false,
   minify: false,
   target: "es2018",
   onSuccess: async () => {
