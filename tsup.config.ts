@@ -11,7 +11,7 @@ export default defineConfig({
     "react",
     "react-dom",
     "next",
-    "framer-motion",
+    /^framer-motion(\/.*)?$/,
     "react-circular-progressbar",
     "recharts",
     "tailwindcss",
