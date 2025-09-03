@@ -21,4 +21,3 @@ export { default as DecibelLabel } from "./design-system/molecule/decibelLabel/D
 export { default as MeasureDecibelLabel } from "./design-system/molecule/measureDecibelLabel/MDecibelLabel";
 export { default as Modal } from "./design-system/molecule/modal/Modal";
 export { default as NavList } from "./design-system/molecule/navList/NavList";
-export { motion, AnimatePresence, useReducedMotion } from 'framer-motion';

@@ -1,5 +1,4 @@
 import * as react from 'react';
-export { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
 declare const buttonStyles: {
     primary: string;
