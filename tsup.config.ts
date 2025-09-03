@@ -3,7 +3,7 @@ import spawn from "cross-spawn";
 
 export default defineConfig({
   entry: ["src/index.ts"],
-  format: ["cjs", "esm"],
+  format: ["esm"],
   dts: true,
   sourcemap: true,
   clean: true,
@@ -17,7 +17,7 @@ export default defineConfig({
     "tailwindcss",
   ],
   outDir: "dist",
-  bundle: false,
+  bundle: true,
   minify: false,
   target: "es2018",
   onSuccess: async () => {

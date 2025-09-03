@@ -87,7 +87,8 @@ export default function Example() {
 
 ## Update
 - **2025.09.03**
-빌드 시 Node.js 메모리 부족으로 인한 Entry point 하나로 간략화
+1. 빌드 시 Node.js 메모리 부족으로 인한 Entry point 하나로 간략화
 
-- **2025.09.03**
-빌드 산출물과 package.json에 명시된 파일들의 경로 mismatch로 인한 업데이트
+2. 빌드 산출물과 package.json에 명시된 파일들의 경로 mismatch로 인한 업데이트
+
+3. root의 index.ts에서의 경로 인식 문제와 build 결과물이 require로 명시됨에 따라 bundler 설정을 esm으로만 진행하도록 변경
