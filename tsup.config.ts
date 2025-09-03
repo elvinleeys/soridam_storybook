@@ -20,6 +20,7 @@ export default defineConfig({
   bundle: true,
   minify: false,
   target: "es2018",
+  treeshake: true,
   onSuccess: async () => {
     console.log("🌱 Building Tailwind CSS...");
 
