@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { flexCol } from "@/mixin/style";
 import { motion } from "framer-motion";
 

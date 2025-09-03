@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { flexRow } from "@/mixin/style";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { useEffect, useState } from "react";

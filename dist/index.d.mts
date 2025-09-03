@@ -1,4 +1,4 @@
-import * as react from 'react';
+import React from 'react';
 
 declare const buttonStyles: {
     primary: string;
@@ -27,7 +27,7 @@ interface ButtonProps {
     className?: string;
 }
 /** Primary UI component for user interaction */
-declare function Button({ buttonType, size, children, onClick, className, ...props }: ButtonProps): react.JSX.Element;
+declare function Button({ buttonType, size, children, onClick, className, ...props }: ButtonProps): React.JSX.Element;
 
 type CategoryIconButtonProps = {
     iconSrc: string;
@@ -38,13 +38,13 @@ type CategoryIconButtonProps = {
     textClassName?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
-declare function CategoryIconButton({ iconSrc, label, active, className, iconClassName, textClassName, onClick, }: CategoryIconButtonProps): react.JSX.Element;
+declare function CategoryIconButton({ iconSrc, label, active, className, iconClassName, textClassName, onClick, }: CategoryIconButtonProps): React.JSX.Element;
 
 interface NoiseMeterChartProps {
     db: number;
     time: string;
 }
-declare function NoiseMeterChart({ db, time }: NoiseMeterChartProps): react.JSX.Element;
+declare function NoiseMeterChart({ db, time }: NoiseMeterChartProps): React.JSX.Element;
 
 interface TimeDBChartProps {
     data: {
@@ -54,7 +54,7 @@ interface TimeDBChartProps {
     }[];
     currentRange: string;
 }
-declare function TimeDBChart({ data, currentRange }: TimeDBChartProps): react.JSX.Element;
+declare function TimeDBChart({ data, currentRange }: TimeDBChartProps): React.JSX.Element;
 
 interface OneLineReviewInputProps {
     value: string;
@@ -62,7 +62,7 @@ interface OneLineReviewInputProps {
     submitAttempted?: boolean;
     maxLength?: number;
 }
-declare function OneLineReviewInput({ value, onChange, submitAttempted, maxLength, }: OneLineReviewInputProps): react.JSX.Element;
+declare function OneLineReviewInput({ value, onChange, submitAttempted, maxLength, }: OneLineReviewInputProps): React.JSX.Element;
 
 declare const DECIBEL_ICONS: {
     default: string;
@@ -82,14 +82,14 @@ interface DecibelIconProps {
     size?: DecibelIconSize;
     iconClassName?: string;
 }
-declare function Decibel({ level, size, iconClassName, }: DecibelIconProps): react.JSX.Element;
+declare function Decibel({ level, size, iconClassName, }: DecibelIconProps): React.JSX.Element;
 
 type EmailInputProps = {
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
 };
-declare function EmailInput({ value, onChange, placeholder, ...props }: EmailInputProps): react.JSX.Element;
+declare function EmailInput({ value, onChange, placeholder, ...props }: EmailInputProps): React.JSX.Element;
 
 type DecibelButtonProps$1 = {
     label: string;
@@ -98,7 +98,7 @@ type DecibelButtonProps$1 = {
     textClassName?: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
-declare function FilterBtn({ label, iconSrc, className, textClassName, onClick, }: DecibelButtonProps$1): react.JSX.Element;
+declare function FilterBtn({ label, iconSrc, className, textClassName, onClick, }: DecibelButtonProps$1): React.JSX.Element;
 
 declare const sizeStyles$2: {
     sm: string;
@@ -111,7 +111,7 @@ interface BackButtonProps {
     href?: string;
     onClick?: () => void;
 }
-declare function BackButton({ size, href, onClick, }: BackButtonProps): react.JSX.Element;
+declare function BackButton({ size, href, onClick, }: BackButtonProps): React.JSX.Element;
 
 declare const sizeStyles$1: {
     sm: string;
@@ -123,7 +123,7 @@ interface InfoBtnProps {
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     size?: InfoBtnSize;
 }
-declare function InfoBtn({ onClick, size, }: InfoBtnProps): react.JSX.Element;
+declare function InfoBtn({ onClick, size, }: InfoBtnProps): React.JSX.Element;
 
 declare const sizeStyles: {
     sm: string;
@@ -135,20 +135,20 @@ interface SettingBtnProps {
     onClick: React.MouseEventHandler<HTMLButtonElement>;
     size?: SettingBtnSize;
 }
-declare function SettingBtn({ onClick, size, }: SettingBtnProps): react.JSX.Element;
+declare function SettingBtn({ onClick, size, }: SettingBtnProps): React.JSX.Element;
 
-declare const Input: react.ForwardRefExoticComponent<{
+declare const Input: React.ForwardRefExoticComponent<{
     inputType?: string;
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
     hasError?: boolean;
-} & react.InputHTMLAttributes<HTMLInputElement> & react.RefAttributes<HTMLInputElement>>;
+} & React.InputHTMLAttributes<HTMLInputElement> & React.RefAttributes<HTMLInputElement>>;
 
 type LogoSize = "md" | "lg";
 declare function Logo({ size }: {
     size?: LogoSize;
-}): react.JSX.Element;
+}): React.JSX.Element;
 
 interface NavImg {
     icon: string;
@@ -161,21 +161,21 @@ type NavItemProps = {
     label: string;
     currentPath?: string;
 };
-declare function NavItem({ href, img, label, currentPath, }: NavItemProps): react.JSX.Element;
+declare function NavItem({ href, img, label, currentPath, }: NavItemProps): React.JSX.Element;
 
 type PwInputProps = {
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
 };
-declare function PwInput({ value, onChange, placeholder, ...props }: PwInputProps): react.JSX.Element;
+declare function PwInput({ value, onChange, placeholder, ...props }: PwInputProps): React.JSX.Element;
 
 interface BottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
     children: React.ReactNode;
 }
-declare function BottomSheet({ isOpen, onClose, children }: BottomSheetProps): react.JSX.Element;
+declare function BottomSheet({ isOpen, onClose, children }: BottomSheetProps): React.JSX.Element;
 
 interface ExpandBottomSheetProps {
     title: string;
@@ -183,7 +183,7 @@ interface ExpandBottomSheetProps {
     onClose: () => void;
     children: React.ReactNode;
 }
-declare function ExpandBottomSheet({ title, isOpen, onClose, children, }: ExpandBottomSheetProps): react.JSX.Element;
+declare function ExpandBottomSheet({ title, isOpen, onClose, children, }: ExpandBottomSheetProps): React.JSX.Element;
 
 type DecibelButtonProps = {
     level: DecibelIconLevel;
@@ -193,26 +193,26 @@ type DecibelButtonProps = {
     textClassName?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
-declare function DecibelButton({ level, label, active, className, textClassName, onClick, }: DecibelButtonProps): react.JSX.Element;
+declare function DecibelButton({ level, label, active, className, textClassName, onClick, }: DecibelButtonProps): React.JSX.Element;
 
 type DecibelLevel$1 = "quiet" | "moderate" | "loud";
 interface DecibelLabelProps {
     level: DecibelLevel$1;
 }
-declare function DecibelLabel({ level }: DecibelLabelProps): react.JSX.Element;
+declare function DecibelLabel({ level }: DecibelLabelProps): React.JSX.Element;
 
 type DecibelLevel = "default" | "quiet" | "moderate" | "loud";
 interface MeasureDecibelLabelProps {
     level: DecibelLevel;
 }
-declare function MDecibelLabel({ level }: MeasureDecibelLabelProps): react.JSX.Element;
+declare function MDecibelLabel({ level }: MeasureDecibelLabelProps): React.JSX.Element;
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     children: React.ReactNode;
 }
-declare function Modal({ isOpen, onClose, children }: ModalProps): react.JSX.Element;
+declare function Modal({ isOpen, onClose, children }: ModalProps): React.JSX.Element;
 
 interface NavListItem {
     href: string;
@@ -227,6 +227,6 @@ interface NavListProps {
     items: NavListItem[];
     currentPath?: string;
 }
-declare function NavList({ items, currentPath }: NavListProps): react.JSX.Element;
+declare function NavList({ items, currentPath }: NavListProps): React.JSX.Element;
 
 export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, SettingBtn as SettingButton, TimeDBChart };

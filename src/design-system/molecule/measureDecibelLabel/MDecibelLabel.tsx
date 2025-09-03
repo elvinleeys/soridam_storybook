@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { flexCol } from "@/mixin/style";
 import Decibel from "@/design-system/atom/decibelLevel/Decibel";
 

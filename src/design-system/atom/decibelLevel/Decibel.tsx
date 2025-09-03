@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from "next/image";
 
 // 데시벨 레벨별 아이콘 경로

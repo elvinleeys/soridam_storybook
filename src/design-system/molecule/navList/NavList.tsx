@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import NavItem from "@/design-system/atom/navItem/NavItem";
 import { flexRow, flexRowCenter } from "@/mixin/style";
 import { motion } from "framer-motion";

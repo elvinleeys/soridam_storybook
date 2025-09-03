@@ -1,7 +1,7 @@
 "use client";
 
-import { flexRow } from "@/mixin/style";
 import React from "react";
+import { flexRow } from "@/mixin/style";
 
 interface StepIndicatorProps {
   totalSteps: number;          // 전체 단계 수

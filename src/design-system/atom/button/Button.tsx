@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { flexRowCenter } from "@/mixin/style";
 
 // 버튼 타입에 따른 Tailwind 클래스를 미리 정의

@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { flexRowCenter } from "@/mixin/style";
 import Decibel, { DecibelIconLevel } from "@/design-system/atom/decibelLevel/Decibel";
 

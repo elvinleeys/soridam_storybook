@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { flexColCenter } from '@/mixin/style';
 import { AnimatePresence, motion } from 'framer-motion';
 
