@@ -86,6 +86,8 @@ export default function Example() {
 
 
 ## Update
-2025.09.03</br>
+- **2025.09.03**
 빌드 시 Node.js 메모리 부족으로 인한 Entry point 하나로 간략화
 
+- **2025.09.03**
+빌드 산출물과 package.json에 명시된 파일들의 경로 mismatch로 인한 업데이트
