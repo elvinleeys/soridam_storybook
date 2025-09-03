@@ -17,7 +17,7 @@ export default defineConfig({
     "tailwindcss",
   ],
   outDir: "dist",
-  bundle: false,
+  bundle: true,
   minify: false,
   target: "es2018",
   treeshake: true,
