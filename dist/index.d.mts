@@ -27,7 +27,7 @@ interface ButtonProps {
     className?: string;
 }
 /** Primary UI component for user interaction */
-declare function Button({ buttonType, size, children, onClick, className, ...props }: ButtonProps): React.JSX.Element;
+declare const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>>;
 
 type CategoryIconButtonProps = {
     iconSrc: string;

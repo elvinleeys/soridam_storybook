@@ -31,14 +31,14 @@ var sizeStyles = {
   small: "w-[9.875rem] h-[2.5rem] rounded-[0.437rem] font-regular text-base",
   xsmall: "w-[6.875rem] h-[2.5rem] rounded-[0.437rem] font-regular text-base"
 };
-function Button({
+var Button = forwardRef(({
   buttonType = "primary",
   size = "large",
   children,
   onClick,
   className,
   ...props
-}) {
+}, ref) => {
   const commonStyles = `${flexRowCenter}`;
   const typeStyles = buttonStyles[buttonType];
   const currentSizeStyles = sizeStyles[size];
@@ -46,6 +46,7 @@ function Button({
   return /* @__PURE__ */ React4.createElement(
     "button",
     {
+      ref,
       type: "button",
       className: finalClassNames,
       onClick,
@@ -53,7 +54,9 @@ function Button({
     },
     children
   );
-}
+});
+Button.displayName = "Button";
+var Button_default = Button;
 function CategoryIconButton({
   iconSrc,
   label,
@@ -1018,6 +1021,6 @@ function NavList({
   );
 }
 
-export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, SettingBtn as SettingButton, TimeDBChart };
+export { BackButton, BottomSheet, Button_default as Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, SettingBtn as SettingButton, TimeDBChart };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map
