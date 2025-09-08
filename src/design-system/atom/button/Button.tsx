@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { flexRowCenter } from "@/mixin/style";
 
 // 버튼 타입에 따른 Tailwind 클래스를 미리 정의
@@ -39,14 +39,14 @@ export interface ButtonProps {
 }
 
 /** Primary UI component for user interaction */
-export default function Button({
-  buttonType = 'primary',
-  size = 'large',
-  children,
-  onClick,
-  className,
-  ...props
-}: ButtonProps) {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
+    buttonType = 'primary',
+    size = 'large',
+    children,
+    onClick,
+    className,
+    ...props
+}, ref) => {
   // 공통적으로 사용되는 폰트 스타일 및 중앙 정렬 클래스
   const commonStyles = `${flexRowCenter}`;
   
@@ -58,6 +58,7 @@ export default function Button({
 
   return (
     <button
+      ref={ref}
       type="button"
       className={finalClassNames}
       onClick={onClick}
@@ -66,4 +67,8 @@ export default function Button({
       {children}
     </button>
   );
-};
+});
+
+Button.displayName = 'Button'; // ✅ 디버깅을 위해 displayName 추가
+
+export default Button;

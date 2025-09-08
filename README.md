@@ -92,3 +92,7 @@ export default function Example() {
 2. 빌드 산출물과 package.json에 명시된 파일들의 경로 mismatch로 인한 업데이트
 
 3. root의 index.ts에서의 경로 인식 문제와 build 결과물이 require로 명시됨에 따라 bundler 설정을 esm으로만 진행하도록 변경
+
+
+- **2025.09.08**
+Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하여 button 태그에 ref 적용
