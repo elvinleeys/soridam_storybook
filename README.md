@@ -96,3 +96,7 @@ export default function Example() {
 
 - **2025.09.08**
 Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하여 button 태그에 ref 적용
+
+- **2025.09.10**
+1. OneLineInput 컴포넌트의 textarea태그에 외부 props를 받도록 설정
+2. style 조정 및 label의 htmlFor 속성 사용

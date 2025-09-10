@@ -16,6 +16,7 @@ export default function OneLineReviewInput({
   onChange,
   submitAttempted = false,
   maxLength = 150,
+  ...props
 }: OneLineReviewInputProps) {
   const isEmpty = value.trim().length === 0;
   const isMax = value.length === maxLength;
@@ -24,36 +25,41 @@ export default function OneLineReviewInput({
   const showError = (submitAttempted && isEmpty) || isMax;
 
   return (
-    <div className={`${flexCol} gap-[0.5rem] w-full`}>
-        <label className="text-base font-bold mb-[0.25rem]">
-            한줄평
-        </label>
-        <motion.div
-            animate={submitAttempted && isEmpty ? { x: [0, -10, 10, -10, 10, 0] } : { x: 0 }}
-            transition={{ duration: 0.4 }}
-        >
-            <textarea
-                value={value}
-                onChange={(e) => {
-                    const next = e.target.value;
-                    if (next.length <= maxLength) onChange(next); // 150자 초과 입력 차단
-                }}
-                placeholder="소음 상황이나 추가로 적고 싶은 내용을 150자 이내로 간단히 작성해주세요. (예: 공사 소음으로 인해 시끄러움)"
-                className={`
-                    w-full 
-                    h-[6.4375rem] 
-                    p-[0.625rem] 
-                    rounded-[0.42rem] 
-                    resize-none 
-                    outline-none 
-                    bg-neutral-gray-bg 
-                    border ${showError ? "border-error" : "border-neutral-gray-soft"}
-                    text-sm 
-                    placeholder-[#808080]
-                `}
-                aria-invalid={showError}
-            />
-        </motion.div>
+    <>
+        <div className={`${flexCol} gap-[0.75rem] w-full mb-[0.5rem]`}>
+            <label htmlFor="oneLineReview" className="text-base !font-bold">
+                한줄평
+            </label>
+            <motion.div
+                className='w-full h-[6.4375rem]'
+                animate={submitAttempted && isEmpty ? { x: [0, -10, 10, -10, 10, 0] } : { x: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                <textarea
+                    id="oneLineReview"
+                    value={value}
+                    onChange={(e) => {
+                        const next = e.target.value;
+                        if (next.length <= maxLength) onChange(next); // 150자 초과 입력 차단
+                    }}
+                    placeholder="소음 상황이나 추가로 적고 싶은 내용을 150자 이내로 간단히 작성해주세요. (예: 공사 소음으로 인해 시끄러움)"
+                    className={`
+                        w-full 
+                        h-[6.4375rem] 
+                        p-[0.625rem] 
+                        rounded-[0.42rem] 
+                        resize-none 
+                        outline-none 
+                        bg-neutral-gray-bg 
+                        border ${showError ? "border-error" : "border-neutral-gray-soft"}
+                        text-sm 
+                        placeholder-[#808080]
+                    `}
+                    aria-invalid={showError}
+                    {...props}
+                />
+            </motion.div>
+        </div>
         {/* 안내 문구(빈값) 또는 글자수(입력됨) */}
         {isEmpty ? (
             <p 
@@ -78,6 +84,6 @@ export default function OneLineReviewInput({
                 {value.length} / {maxLength}
             </div>
         )}
-    </div>
+    </>
   );
 }
