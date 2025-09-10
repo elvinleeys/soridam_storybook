@@ -62,6 +62,7 @@ interface OneLineReviewInputProps {
     onChange: (value: string) => void;
     submitAttempted?: boolean;
     maxLength?: number;
+    onFocus?: () => void;
 }
 declare function OneLineReviewInput({ value, onChange, submitAttempted, maxLength, ...props }: OneLineReviewInputProps): React.JSX.Element;
 
