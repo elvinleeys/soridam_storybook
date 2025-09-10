@@ -34,6 +34,7 @@ export interface ButtonProps {
   children: React.ReactNode;
   /** Click handler */
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
   /** Optional custom class to override default styles */
   className?: string; // ✅ 사용자 지정 클래스 추가
 }
