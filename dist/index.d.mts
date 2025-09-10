@@ -62,7 +62,7 @@ interface OneLineReviewInputProps {
     submitAttempted?: boolean;
     maxLength?: number;
 }
-declare function OneLineReviewInput({ value, onChange, submitAttempted, maxLength, }: OneLineReviewInputProps): React.JSX.Element;
+declare function OneLineReviewInput({ value, onChange, submitAttempted, maxLength, ...props }: OneLineReviewInputProps): React.JSX.Element;
 
 declare const DECIBEL_ICONS: {
     default: string;

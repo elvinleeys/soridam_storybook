@@ -256,20 +256,23 @@ function OneLineReviewInput({
   value,
   onChange,
   submitAttempted = false,
-  maxLength = 150
+  maxLength = 150,
+  ...props
 }) {
   const isEmpty = value.trim().length === 0;
   const isMax = value.length === maxLength;
   const showError = submitAttempted && isEmpty || isMax;
-  return /* @__PURE__ */ React4.createElement("div", { className: `${flexCol} gap-[0.5rem] w-full` }, /* @__PURE__ */ React4.createElement("label", { className: "text-base font-bold mb-[0.25rem]" }, "\uD55C\uC904\uD3C9"), /* @__PURE__ */ React4.createElement(
+  return /* @__PURE__ */ React4.createElement(React4.Fragment, null, /* @__PURE__ */ React4.createElement("div", { className: `${flexCol} gap-[0.75rem] w-full mb-[0.5rem]` }, /* @__PURE__ */ React4.createElement("label", { htmlFor: "oneLineReview", className: "text-base !font-bold" }, "\uD55C\uC904\uD3C9"), /* @__PURE__ */ React4.createElement(
     motion.div,
     {
+      className: "w-full h-[6.4375rem]",
       animate: submitAttempted && isEmpty ? { x: [0, -10, 10, -10, 10, 0] } : { x: 0 },
       transition: { duration: 0.4 }
     },
     /* @__PURE__ */ React4.createElement(
       "textarea",
       {
+        id: "oneLineReview",
         value,
         onChange: (e) => {
           const next = e.target.value;
@@ -277,21 +280,22 @@ function OneLineReviewInput({
         },
         placeholder: "\uC18C\uC74C \uC0C1\uD669\uC774\uB098 \uCD94\uAC00\uB85C \uC801\uACE0 \uC2F6\uC740 \uB0B4\uC6A9\uC744 150\uC790 \uC774\uB0B4\uB85C \uAC04\uB2E8\uD788 \uC791\uC131\uD574\uC8FC\uC138\uC694. (\uC608: \uACF5\uC0AC \uC18C\uC74C\uC73C\uB85C \uC778\uD574 \uC2DC\uB044\uB7EC\uC6C0)",
         className: `
-                    w-full 
-                    h-[6.4375rem] 
-                    p-[0.625rem] 
-                    rounded-[0.42rem] 
-                    resize-none 
-                    outline-none 
-                    bg-neutral-gray-bg 
-                    border ${showError ? "border-error" : "border-neutral-gray-soft"}
-                    text-sm 
-                    placeholder-[#808080]
-                `,
-        "aria-invalid": showError
+                        w-full 
+                        h-[6.4375rem] 
+                        p-[0.625rem] 
+                        rounded-[0.42rem] 
+                        resize-none 
+                        outline-none 
+                        bg-neutral-gray-bg 
+                        border ${showError ? "border-error" : "border-neutral-gray-soft"}
+                        text-sm 
+                        placeholder-[#808080]
+                    `,
+        "aria-invalid": showError,
+        ...props
       }
     )
-  ), isEmpty ? /* @__PURE__ */ React4.createElement(
+  )), isEmpty ? /* @__PURE__ */ React4.createElement(
     "p",
     {
       className: `
