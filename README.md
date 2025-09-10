@@ -101,3 +101,4 @@ Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하�
 1. OneLineInput 컴포넌트의 textarea태그에 외부 props를 받도록 설정
 2. style 조정 및 label의 htmlFor 속성 사용
 3. Button 컴포넌트의 disabled 속성 type 추가
+4. OneLineInput 컴포넌트의 onFocus 속성 type 추가

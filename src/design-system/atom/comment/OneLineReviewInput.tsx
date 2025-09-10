@@ -9,6 +9,7 @@ interface OneLineReviewInputProps {
   onChange: (value: string) => void;      // 외부 state setter
   submitAttempted?: boolean;              // 부모에서 '제출 시도' 여부 전달
   maxLength?: number;                     // 기본 150
+  onFocus?: () => void;
 }
 
 export default function OneLineReviewInput({
