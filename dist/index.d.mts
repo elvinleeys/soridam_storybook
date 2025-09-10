@@ -23,6 +23,7 @@ interface ButtonProps {
     children: React.ReactNode;
     /** Click handler */
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    disabled?: boolean;
     /** Optional custom class to override default styles */
     className?: string;
 }
