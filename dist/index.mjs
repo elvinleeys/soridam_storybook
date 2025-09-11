@@ -543,7 +543,7 @@ function NavItem({
 }) {
   var _a, _b;
   const path = (_b = (_a = usePathname()) != null ? _a : currentPath) != null ? _b : "";
-  const isActive = path.startsWith(href);
+  const isActive = href === "/" ? path === "/" : path.startsWith(href);
   const prefersReducedMotion = useReducedMotion();
   return /* @__PURE__ */ React4.createElement(
     Link,
