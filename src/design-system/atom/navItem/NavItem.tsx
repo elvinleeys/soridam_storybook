@@ -27,7 +27,7 @@ export default function NavItem({
   currentPath, 
 }: NavItemProps) {
     const path = usePathname() ?? currentPath ?? ""; // null이면 빈 문자열
-    const isActive = path.startsWith(href);
+    const isActive = href === "/" ? path === "/" : path.startsWith(href);
     const prefersReducedMotion = useReducedMotion();
 
     return (
