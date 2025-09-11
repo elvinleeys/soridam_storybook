@@ -102,3 +102,6 @@ Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하�
 2. style 조정 및 label의 htmlFor 속성 사용
 3. Button 컴포넌트의 disabled 속성 type 추가
 4. OneLineInput 컴포넌트의 onFocus 속성 type 추가
+
+- **2025.09.11**
+1. SearchBar의 UI design 동작상 button이 더 적합한 것으로 판단되어, input에서 button으로 교체
