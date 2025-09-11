@@ -3,7 +3,6 @@
 import React from 'react';
 import { flexRow } from "@/mixin/style";
 import Image from "next/image";
-import { ChangeEvent } from "react";
 
 type SearchBarProps = {
   placeholder?: string;
