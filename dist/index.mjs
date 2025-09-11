@@ -691,6 +691,83 @@ function PwInput({
     ))
   );
 }
+function RadiusButton({
+  label,
+  active = false,
+  onClick,
+  className
+}) {
+  const commonStyles = `${flexRowCenter} w-[6.1875rem] h-[2.5rem] rounded-[1.25rem] font-regular text-sm`;
+  const activeStyles = "border border-primary text-primary-blue-strong bg-neutral-gray-bg";
+  const inactiveStyles = "border border-neutral-gray-soft text-neutral-gray-sub bg-white";
+  const buttonStyle = active ? activeStyles : inactiveStyles;
+  const finalClassNames = `${commonStyles} ${buttonStyle} ${className || ""}`;
+  return /* @__PURE__ */ React4.createElement(
+    "button",
+    {
+      type: "button",
+      className: finalClassNames,
+      onClick
+    },
+    label
+  );
+}
+function SearchBar({
+  placeholder = "\uC9C0\uBC88, \uB3C4\uB85C\uBA85 \uC8FC\uC18C \uAC80\uC0C9",
+  onClick
+}) {
+  return /* @__PURE__ */ React4.createElement(
+    "button",
+    {
+      type: "button",
+      onClick,
+      className: `
+                w-[16.25rem]
+                h-[2.5rem]
+                py-2
+                px-3
+                ${flexRow}
+                items-center
+                gap-[0.5rem]
+                bg-neutral-gray-bg
+                rounded-[6.25rem] 
+                border border-neutral-gray-soft
+            `
+    },
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/search-ico.svg", alt: "search-icon", fill: true, priority: true })),
+    /* @__PURE__ */ React4.createElement(
+      "div",
+      {
+        className: "\r\n                    flex-1\r\n                    font-regular\r\n                    text-base \r\n                    text-[#808080]\r\n                    bg-transparent\r\n                    text-start\r\n                "
+      },
+      placeholder
+    )
+  );
+}
+var StepIndicator = ({
+  totalSteps,
+  currentStep,
+  className = ""
+}) => {
+  return /* @__PURE__ */ React4.createElement("div", { className: `${flexRow} items-center space-x-2 ${className}` }, Array.from({ length: totalSteps }).map((_, index) => {
+    const stepNumber = index + 1;
+    const isActive = stepNumber <= currentStep;
+    return /* @__PURE__ */ React4.createElement(React4.Fragment, { key: index }, /* @__PURE__ */ React4.createElement(
+      "div",
+      {
+        className: `
+                    w-2.5
+                    h-2.5 
+                    rounded-full 
+                    transition-colors 
+                    duration-300
+                    ${isActive ? "bg-primary" : "bg-neutral-gray-bg"}
+                `
+      }
+    ));
+  }));
+};
+var StepIndicator_default = StepIndicator;
 function BottomSheet({ isOpen, onClose, children }) {
   return /* @__PURE__ */ React4.createElement(AnimatePresence, null, isOpen && /* @__PURE__ */ React4.createElement(
     motion.div,
@@ -1025,6 +1102,6 @@ function NavList({
   );
 }
 
-export { BackButton, BottomSheet, Button_default as Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, SettingBtn as SettingButton, TimeDBChart };
+export { BackButton, BottomSheet, Button_default as Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SearchBar, SettingBtn as SettingButton, StepIndicator_default as StepIndicator, TimeDBChart };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

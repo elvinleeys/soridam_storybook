@@ -172,6 +172,27 @@ type PwInputProps = {
 };
 declare function PwInput({ value, onChange, placeholder, ...props }: PwInputProps): React.JSX.Element;
 
+interface RadiusBtnProps {
+    label: string;
+    active?: boolean;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    className?: string;
+}
+declare function RadiusButton({ label, active, onClick, className }: RadiusBtnProps): React.JSX.Element;
+
+type SearchBarProps = {
+    placeholder?: string;
+    onClick?: () => void;
+};
+declare function SearchBar({ placeholder, onClick, }: SearchBarProps): React.JSX.Element;
+
+interface StepIndicatorProps {
+    totalSteps: number;
+    currentStep: number;
+    className?: string;
+}
+declare const StepIndicator: React.FC<StepIndicatorProps>;
+
 interface BottomSheetProps {
     isOpen: boolean;
     onClose: () => void;
@@ -231,4 +252,4 @@ interface NavListProps {
 }
 declare function NavList({ items, currentPath }: NavListProps): React.JSX.Element;
 
-export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, SettingBtn as SettingButton, TimeDBChart };
+export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SearchBar, SettingBtn as SettingButton, StepIndicator, TimeDBChart };

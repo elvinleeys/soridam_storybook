@@ -13,6 +13,9 @@ export { default as Input } from "./design-system/atom/input/Input";
 export { default as Logo } from "./design-system/atom/logo/Logo";
 export { default as NavItem } from "./design-system/atom/navItem/NavItem";
 export { default as PasswordInput } from "./design-system/atom/pwInput/PwInput";
+export { default as RadiusButton } from "./design-system/atom/radiusButton/RadiusButton";
+export { default as SearchBar } from "./design-system/atom/searchBar/SearchBar";
+export { default as StepIndicator } from "./design-system/atom/stepIndicator/StepIndicator";
 
 export { default as BottomSheet } from "./design-system/molecule/bottomSheet/BottomSheet";
 export { default as ExpandBottomSheet } from "./design-system/molecule/expandBottomSheet/ExpandBottomSheet";
