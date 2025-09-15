@@ -2,6 +2,7 @@
 
 import React from "react";
 import { flexRow } from "@/mixin/style";
+import { motion } from "framer-motion";
 
 interface StepIndicatorProps {
   totalSteps: number;          // 전체 단계 수
@@ -21,18 +22,15 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
         const isActive = stepNumber <= currentStep;
 
         return (
-          <React.Fragment key={index}>
-            <div
-                className={`
-                    w-2.5
-                    h-2.5 
-                    rounded-full 
-                    transition-colors 
-                    duration-300
-                    ${isActive ? "bg-primary" : "bg-neutral-gray-bg"}
-                `}
-            ></div>
-          </React.Fragment>
+          <motion.div
+            key={index}
+            className="w-2.5 h-2.5 rounded-full"
+            animate={{
+              backgroundColor: isActive ? "#007bff" : "#F5F5F5", // active / inactive 색상
+              scale: isActive ? 1.2 : 1,                            // 선택된 단계만 살짝 커지게
+            }}
+            transition={{ duration: 0.3 }}
+          />
         );
       })}
     </div>

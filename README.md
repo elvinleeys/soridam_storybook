@@ -106,3 +106,6 @@ Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하�
 - **2025.09.11**
 1. SearchBar의 UI design 동작상 button이 더 적합한 것으로 판단되어, input에서 button으로 교체
 2. NavItem의 활성화 판단여부에 startsWith를 사용하여 다른 경로로 이동해도 기본경로의 NavItem이 활성화되는 사례가 발생함에 따라 로직을 변경
+
+- **2025.09.15**
+Sign-up 페이지의 stepIndicator에 자연스러운 animation 효과를 위해 framer-motion 도입

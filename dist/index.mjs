@@ -752,19 +752,20 @@ var StepIndicator = ({
   return /* @__PURE__ */ React4.createElement("div", { className: `${flexRow} items-center space-x-2 ${className}` }, Array.from({ length: totalSteps }).map((_, index) => {
     const stepNumber = index + 1;
     const isActive = stepNumber <= currentStep;
-    return /* @__PURE__ */ React4.createElement(React4.Fragment, { key: index }, /* @__PURE__ */ React4.createElement(
-      "div",
+    return /* @__PURE__ */ React4.createElement(
+      motion.div,
       {
-        className: `
-                    w-2.5
-                    h-2.5 
-                    rounded-full 
-                    transition-colors 
-                    duration-300
-                    ${isActive ? "bg-primary" : "bg-neutral-gray-bg"}
-                `
+        key: index,
+        className: "w-2.5 h-2.5 rounded-full",
+        animate: {
+          backgroundColor: isActive ? "#007bff" : "#F5F5F5",
+          // active / inactive 색상
+          scale: isActive ? 1.2 : 1
+          // 선택된 단계만 살짝 커지게
+        },
+        transition: { duration: 0.3 }
       }
-    ));
+    );
   }));
 };
 var StepIndicator_default = StepIndicator;
