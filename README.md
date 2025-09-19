@@ -109,3 +109,6 @@ Button 컴포넌트를 여러번 재사용함에 따라 forwardRef를 활용하�
 
 - **2025.09.15**
 Sign-up 페이지의 stepIndicator에 자연스러운 animation 효과를 위해 framer-motion 도입
+
+- **2025.09.19**
+EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputElement>` 추가

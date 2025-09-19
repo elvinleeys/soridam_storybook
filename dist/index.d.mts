@@ -90,7 +90,7 @@ type EmailInputProps = {
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 declare function EmailInput({ value, onChange, placeholder, ...props }: EmailInputProps): React.JSX.Element;
 
 type DecibelButtonProps$1 = {
@@ -169,7 +169,7 @@ type PwInputProps = {
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 declare function PwInput({ value, onChange, placeholder, ...props }: PwInputProps): React.JSX.Element;
 
 interface RadiusBtnProps {
