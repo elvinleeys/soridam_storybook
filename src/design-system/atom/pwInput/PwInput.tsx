@@ -10,7 +10,7 @@ type PwInputProps = {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export default function PwInput({ 
     value, 

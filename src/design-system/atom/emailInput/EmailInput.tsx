@@ -6,7 +6,7 @@ type EmailInputProps = {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export default function EmailInput({ 
     value, 
