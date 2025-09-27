@@ -2,7 +2,7 @@
   "name": "soridam-design-system",
   "description": "A design system for Soridam project",
   "private": false,
-  "version": "0.1.24",
+  "version": "0.1.25",
   "publishConfig": {
     "access": "public"
   },
