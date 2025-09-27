@@ -209,7 +209,7 @@ function TimeDBChart({ data, currentRange }) {
       value
     );
   };
-  return /* @__PURE__ */ React4.createElement("div", { className: "w-full h-[6.875rem]" }, /* @__PURE__ */ React4.createElement(ResponsiveContainer, null, /* @__PURE__ */ React4.createElement(
+  return /* @__PURE__ */ React4.createElement("div", { className: "w-full h-[6.875rem] flex justify-center items-center" }, /* @__PURE__ */ React4.createElement(ResponsiveContainer, { width: "100%", height: "100%" }, /* @__PURE__ */ React4.createElement(
     BarChart,
     {
       data,
@@ -219,6 +219,7 @@ function TimeDBChart({ data, currentRange }) {
       XAxis,
       {
         dataKey: "timeRange",
+        interval: 0,
         tick: {
           fill: "#060606",
           fontFamily: "Pretendard",
@@ -226,10 +227,11 @@ function TimeDBChart({ data, currentRange }) {
           fontStyle: "normal",
           fontSize: 14.87,
           letterSpacing: "0px"
-        }
+        },
+        tickLine: false
       }
     ),
-    /* @__PURE__ */ React4.createElement(YAxis, { domain: [0, 120], tickLine: true, tick: false }),
+    /* @__PURE__ */ React4.createElement(YAxis, { domain: [0, 120], tick: false, width: 1, axisLine: true, tickLine: false }),
     /* @__PURE__ */ React4.createElement(
       Bar,
       {

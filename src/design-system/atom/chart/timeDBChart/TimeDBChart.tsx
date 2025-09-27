@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Cell,
   LabelList,
+  ReferenceLine,
 } from "recharts";
 
 export interface TimeDBChartProps {
@@ -65,14 +66,15 @@ export default function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
   };
 
   return (
-    <div className="w-full h-[6.875rem]">
-      <ResponsiveContainer>
+    <div className="w-full h-[6.875rem] flex justify-center items-center">
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
           barGap="20%"
         >
           <XAxis
             dataKey="timeRange"
+            interval={0}
             tick={{
               fill: "#060606",
               fontFamily: "Pretendard",
@@ -81,8 +83,9 @@ export default function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
               fontSize: 14.87,
               letterSpacing: "0px",
             }}
+            tickLine={false}
           />
-          <YAxis domain={[0, 120]} tickLine={true} tick={false} />
+          <YAxis domain={[0, 120]} tick={false} width={1} axisLine={true} tickLine={false} />
           <Bar
             dataKey="db"
             radius={[barRadius, barRadius, 0, 0]}
