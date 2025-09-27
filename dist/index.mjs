@@ -913,7 +913,16 @@ function ExpandBottomSheet({
         /* @__PURE__ */ React4.createElement(BackButton, { onClick: onClose }),
         /* @__PURE__ */ React4.createElement("p", { className: "text-xl font-bold color-neutral-black" }, title)
       ),
-      /* @__PURE__ */ React4.createElement("main", { className: "w-full h-auto pr-[1rem] pl-[1rem]" }, children)
+      /* @__PURE__ */ React4.createElement(
+        "main",
+        {
+          className: `
+                w-full h-auto pr-[1rem] pl-[1rem]
+                ${!expanded ? "pt-[2rem]" : "pt-0"} 
+              `
+        },
+        children
+      )
     )
   ));
 }

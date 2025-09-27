@@ -137,7 +137,12 @@ export default function ExpandBottomSheet({
                 </p>
               </motion.header>
             )}
-            <main className="w-full h-auto pr-[1rem] pl-[1rem]">
+            <main 
+              className={`
+                w-full h-auto pr-[1rem] pl-[1rem]
+                ${!expanded ? "pt-[2rem]" : "pt-0"} 
+              `}
+            >
               {children}
             </main>
           </motion.div>
