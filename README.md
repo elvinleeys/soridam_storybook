@@ -116,3 +116,4 @@ EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputEle
 - **2025.09.27**
 1. ExpandedBottomSheet의 main 태그의 padding 변경
 2. ExpandedBottomSheet의 overlay 및 bottomSheet 위치 조정
+3. TimeDBChart barCategoryGap 속성을 px에서 %로 변화 및 barSize제거

@@ -213,7 +213,7 @@ function TimeDBChart({ data, currentRange }) {
     BarChart,
     {
       data,
-      barGap: 62.36
+      barGap: "20%"
     },
     /* @__PURE__ */ React4.createElement(
       XAxis,
@@ -234,8 +234,7 @@ function TimeDBChart({ data, currentRange }) {
       Bar,
       {
         dataKey: "db",
-        radius: [barRadius, barRadius, 0, 0],
-        barSize: 72.76
+        radius: [barRadius, barRadius, 0, 0]
       },
       data.map((entry, index) => {
         const isCurrent = entry.timeRange === currentRange;

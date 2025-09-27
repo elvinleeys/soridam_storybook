@@ -69,7 +69,7 @@ export default function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
       <ResponsiveContainer>
         <BarChart
           data={data}
-          barGap={62.36}
+          barGap="20%"
         >
           <XAxis
             dataKey="timeRange"
@@ -86,7 +86,6 @@ export default function TimeDBChart({ data, currentRange }: TimeDBChartProps) {
           <Bar
             dataKey="db"
             radius={[barRadius, barRadius, 0, 0]}
-            barSize={72.76}
           >
             {data.map((entry, index) => {
               const isCurrent = entry.timeRange === currentRange;
