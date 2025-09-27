@@ -109,7 +109,7 @@ export default function ExpandBottomSheet({
               bg-white
               shadow-[0.25rem_0.25rem_0.8125rem_0px_#00000040]
               ${expanded ? "" : "rounded-tl-lg rounded-tr-lg"}
-              overflow-y-auto
+              overflow-y-hidden
               transition-[height] duration-200
             `}
             onClick={(e) => e.stopPropagation()}
@@ -140,7 +140,12 @@ export default function ExpandBottomSheet({
             )}
             <main 
               className={`
-                w-full h-auto pr-[1rem] pl-[1rem]
+                w-full 
+                h-full
+                flex
+                flex-col 
+                pr-[1rem] 
+                pl-[1rem]
                 ${!expanded ? "pt-[2rem]" : "pt-0"} 
               `}
             >
