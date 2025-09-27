@@ -114,4 +114,5 @@ Sign-up 페이지의 stepIndicator에 자연스러운 animation 효과를 위해
 EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputElement>` 추가
 
 - **2025.09.27**
-ExpandedBottomSheet의 main 태그의 padding 변경
+1. ExpandedBottomSheet의 main 태그의 padding 변경
+2. ExpandedBottomSheet의 overlay items-end 속성 제거

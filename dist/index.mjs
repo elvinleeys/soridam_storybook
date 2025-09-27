@@ -859,7 +859,7 @@ function ExpandBottomSheet({
     motion.div,
     {
       key: "overlay",
-      className: "bg-black/60 fixed inset-0 w-full flex items-end",
+      className: "bg-black/60 fixed inset-0 w-full",
       onClick: onClose,
       initial: { opacity: 0 },
       animate: { opacity: 1 },
@@ -879,7 +879,7 @@ function ExpandBottomSheet({
         dragMomentum: false,
         onDrag: handleDrag,
         onDragEnd: handleDragEnd,
-        style: { height: `${sheetHeight}rem` },
+        style: { height: `${sheetHeight}rem`, bottom: `${NAVBAR_HEIGHT_REM}rem` },
         className: `
               w-full
               max-h-[calc(100vh-6.25rem)]
