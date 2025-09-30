@@ -120,4 +120,5 @@ EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputEle
 4. TimeDBChart의 chart 배치 변경
 
 - **2025.09.30**
-modal이 항상 위에 나타날 수 있도록 z-index 1000 설정
+1. modal이 항상 위에 나타날 수 있도록 z-index 1000 설정
+2. NavItem, NavList 관련 z-index 설정 및 AnimatePresence 최소화

@@ -157,13 +157,13 @@ interface NavImg {
     iconLabel: string;
     activeIcon: string;
 }
-type NavItemProps = {
+interface NavItemProps {
     href: string;
     img: NavImg;
     label: string;
     currentPath?: string;
-};
-declare function NavItem({ href, img, label, currentPath, }: NavItemProps): React.JSX.Element;
+}
+declare function NavItem({ href, img, label, currentPath }: NavItemProps): React.JSX.Element;
 
 type PwInputProps = {
     value?: string;

@@ -536,12 +536,7 @@ var sizeMap = {
 function Logo({ size = "md" }) {
   return /* @__PURE__ */ React4.createElement("div", { className: `${sizeMap[size]} relative` }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/logo.svg", alt: "soridam logo", fill: true, priority: true }));
 }
-function NavItem({
-  href,
-  img,
-  label,
-  currentPath
-}) {
+function NavItem({ href, img, label, currentPath }) {
   var _a, _b;
   const path = (_b = (_a = usePathname()) != null ? _a : currentPath) != null ? _b : "";
   const isActive = href === "/" ? path === "/" : path.startsWith(href);
@@ -550,52 +545,38 @@ function NavItem({
     Link,
     {
       href,
-      className: `
-                w-[3.25rem] 
-                h-[3.125rem] 
-                ${flexColCenter} 
-                gap-[0.375rem]
-            `
+      "aria-label": label,
+      className: `w-[3.25rem] h-[3.125rem] ${flexColCenter} gap-[0.375rem]`
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(AnimatePresence, { mode: "wait", initial: false }, isActive ? /* @__PURE__ */ React4.createElement(
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(AnimatePresence, { mode: "wait", initial: false }, /* @__PURE__ */ React4.createElement(
       motion.div,
       {
-        key: "active-icon",
-        initial: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.9 },
+        key: isActive ? "active" : "idle",
+        initial: { opacity: 0, scale: prefersReducedMotion ? 1 : isActive ? 0.9 : 0.95 },
         animate: { opacity: 1, scale: 1 },
-        exit: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.9 },
+        exit: { opacity: 0, scale: prefersReducedMotion ? 1 : isActive ? 0.9 : 0.95 },
         transition: { duration: 0.18 },
         className: "absolute inset-0"
       },
-      /* @__PURE__ */ React4.createElement(Image10, { src: img.activeIcon, alt: img.iconLabel, fill: true, priority: true })
-    ) : /* @__PURE__ */ React4.createElement(
-      motion.div,
-      {
-        key: "idle-icon",
-        initial: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.95 },
-        animate: { opacity: 1, scale: 1 },
-        exit: { opacity: 0, scale: prefersReducedMotion ? 1 : 0.95 },
-        transition: { duration: 0.18 },
-        className: "absolute inset-0"
-      },
-      /* @__PURE__ */ React4.createElement(Image10, { src: img.icon, alt: img.iconLabel, fill: true, priority: true })
+      /* @__PURE__ */ React4.createElement(
+        Image10,
+        {
+          src: isActive ? img.activeIcon : img.icon,
+          alt: "",
+          fill: true,
+          priority: true
+        }
+      )
     ))),
     /* @__PURE__ */ React4.createElement(
       motion.p,
       {
-        className: `
-                    ${flexRowCenter}
-                    font-pretendard 
-                    font-medium 
-                    text-sm 
-                    leading-5 
-                    tracking-[0]
-                `,
         animate: {
           color: isActive ? "var(--color-primary-blue)" : "var(--color-neutral-black)",
           scale: prefersReducedMotion ? 1 : isActive ? 1.02 : 1
         },
-        transition: { duration: 0.18 }
+        transition: { duration: 0.18 },
+        className: "font-pretendard font-medium text-sm leading-5 tracking-[0]"
       },
       label
     )
@@ -1069,14 +1050,7 @@ var container = {
     transition: { when: "beforeChildren", staggerChildren: 0.06, duration: 0.18 }
   }
 };
-var child = {
-  hidden: { opacity: 0, y: 4 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.18 } }
-};
-function NavList({
-  items,
-  currentPath
-}) {
+function NavList({ items, currentPath }) {
   return /* @__PURE__ */ React4.createElement(
     motion.nav,
     {
@@ -1084,38 +1058,27 @@ function NavList({
       initial: "hidden",
       animate: "show",
       className: `
-                w-full 
-                h-[6.25rem] 
-                ${flexRowCenter}
-                shadow-[0_-1px_4px_0_rgba(0,0,0,0.15)] 
-                pt-2.5 
-                pr-[2.9375rem] 
-                pb-10 
-                pl-[2.875rem]
-            `
+        w-full h-[6.25rem]
+        ${flexRowCenter} 
+        shadow-[0_-1px_4px_0_rgba(0,0,0,0.15)]
+        pt-2.5 pr-[2.9375rem] pb-10 pl-[2.875rem]
+        fixed 
+        bottom-0 
+        left-0 
+        bg-white 
+        z-[200]
+      `
     },
-    /* @__PURE__ */ React4.createElement(
-      "div",
+    /* @__PURE__ */ React4.createElement("div", { className: `w-full h-[3.125rem] ${flexRow} items-center justify-between` }, items.map((item) => /* @__PURE__ */ React4.createElement(
+      NavItem,
       {
-        className: `
-                    w-full
-                    h-[3.125rem]
-                    ${flexRow} 
-                    items-center 
-                    justify-between
-                `
-      },
-      items.map((item) => /* @__PURE__ */ React4.createElement(motion.div, { key: item.href, variants: child }, /* @__PURE__ */ React4.createElement(
-        NavItem,
-        {
-          key: item.href,
-          href: item.href,
-          img: item.img,
-          label: item.label,
-          currentPath
-        }
-      )))
-    )
+        key: item.href,
+        href: item.href,
+        img: item.img,
+        label: item.label,
+        currentPath
+      }
+    )))
   );
 }
 
