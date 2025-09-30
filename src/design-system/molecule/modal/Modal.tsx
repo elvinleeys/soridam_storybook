@@ -30,7 +30,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         <>
           <motion.div
             key="overlay"
-            className={`bg-black/60 fixed inset-0 ${flexColCenter} w-full h-screen`}
+            className={`bg-black/60 fixed inset-0 z-[1000] ${flexColCenter} w-full h-screen`}
             onClick={onClose}
             variants={overlayVariants}
             initial="hidden"

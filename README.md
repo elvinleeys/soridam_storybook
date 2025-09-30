@@ -118,3 +118,6 @@ EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputEle
 2. ExpandedBottomSheet의 overlay 및 bottomSheet 위치 조정
 3. TimeDBChart barCategoryGap 속성을 px에서 %로 변화 및 barSize제거
 4. TimeDBChart의 chart 배치 변경
+
+- **2025.09.30**
+modal이 항상 위에 나타날 수 있도록 z-index 1000 설정
