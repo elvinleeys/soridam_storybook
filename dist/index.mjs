@@ -756,7 +756,7 @@ function BottomSheet({ isOpen, onClose, children }) {
     motion.div,
     {
       key: "overlay",
-      className: "bg-black/60 fixed inset-0 w-full h-screen flex items-end",
+      className: "bg-black/60 fixed inset-0 w-full h-screen flex items-end z-[300]",
       onClick: onClose,
       initial: { opacity: 0 },
       animate: { opacity: 1 },
@@ -841,7 +841,7 @@ function ExpandBottomSheet({
     motion.div,
     {
       key: "overlay",
-      className: "bg-black/60 fixed inset-0 w-full flex items-end",
+      className: "bg-black/60 fixed inset-0 w-full flex items-end z-[150]",
       style: { top: 0, left: 0, right: 0, bottom: `${NAVBAR_HEIGHT_REM}rem` },
       onClick: onClose,
       initial: { opacity: 0 },
