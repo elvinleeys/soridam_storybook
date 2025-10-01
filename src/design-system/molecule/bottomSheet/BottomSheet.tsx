@@ -15,7 +15,7 @@ export default function BottomSheet({ isOpen, onClose, children }: BottomSheetPr
             {isOpen && (
                 <motion.div
                     key="overlay"
-                    className="bg-black/60 fixed inset-0 w-full h-screen flex items-end"
+                    className="bg-black/60 fixed inset-0 w-full h-screen flex items-end z-[300]"
                     onClick={onClose}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

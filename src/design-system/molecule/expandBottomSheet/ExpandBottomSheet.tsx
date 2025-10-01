@@ -83,7 +83,7 @@ export default function ExpandBottomSheet({
       {isOpen && (
         <motion.div
           key="overlay"
-          className="bg-black/60 fixed inset-0 w-full flex items-end"
+          className="bg-black/60 fixed inset-0 w-full flex items-end z-[150]"
           style={{ top: 0, left: 0, right: 0, bottom: `${NAVBAR_HEIGHT_REM}rem` }}
           onClick={onClose}
           initial={{ opacity: 0 }}

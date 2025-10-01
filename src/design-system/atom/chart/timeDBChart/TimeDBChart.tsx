@@ -9,7 +9,6 @@ import {
   ResponsiveContainer,
   Cell,
   LabelList,
-  ReferenceLine,
 } from "recharts";
 
 export interface TimeDBChartProps {

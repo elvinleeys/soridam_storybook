@@ -122,3 +122,6 @@ EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputEle
 - **2025.09.30**
 1. modal이 항상 위에 나타날 수 있도록 z-index 1000 설정
 2. NavItem, NavList 관련 z-index 설정 및 AnimatePresence 최소화
+
+- **2025.10.01**
+1. ExpandBottomSheet 및 BottomSheet z-index 부여
