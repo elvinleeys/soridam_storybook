@@ -125,3 +125,6 @@ EmailInput 및 PWInput 컴포넌트의 type에 `InputHTMLAttributes<HTMLInputEle
 
 - **2025.10.01**
 1. ExpandBottomSheet 및 BottomSheet z-index 부여
+
+- **2025.10/08**
+font 관련 설정을 fonts.css로 분리 및 `font-display: swap` 적용
