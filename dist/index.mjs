@@ -536,7 +536,13 @@ var sizeMap = {
 function Logo({ size = "md" }) {
   return /* @__PURE__ */ React4.createElement("div", { className: `${sizeMap[size]} relative` }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/logo.svg", alt: "soridam logo", fill: true, priority: true }));
 }
-function NavItem({ href, img, label, currentPath }) {
+function NavItem({
+  href,
+  img,
+  label,
+  currentPath,
+  prefetch = false
+}) {
   var _a, _b;
   const path = (_b = (_a = usePathname()) != null ? _a : currentPath) != null ? _b : "";
   const isActive = href === "/" ? path === "/" : path.startsWith(href);
@@ -546,7 +552,8 @@ function NavItem({ href, img, label, currentPath }) {
     {
       href,
       "aria-label": label,
-      className: `w-[3.25rem] h-[3.125rem] ${flexColCenter} gap-[0.375rem]`
+      className: `w-[3.25rem] h-[3.125rem] ${flexColCenter} gap-[0.375rem]`,
+      prefetch
     },
     /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(AnimatePresence, { mode: "wait", initial: false }, /* @__PURE__ */ React4.createElement(
       motion.div,
@@ -1076,7 +1083,8 @@ function NavList({ items, currentPath }) {
         href: item.href,
         img: item.img,
         label: item.label,
-        currentPath
+        currentPath,
+        prefetch: item.prefetch
       }
     )))
   );

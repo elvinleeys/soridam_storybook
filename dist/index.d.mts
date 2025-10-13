@@ -162,8 +162,9 @@ interface NavItemProps {
     img: NavImg;
     label: string;
     currentPath?: string;
+    prefetch?: boolean;
 }
-declare function NavItem({ href, img, label, currentPath }: NavItemProps): React.JSX.Element;
+declare function NavItem({ href, img, label, currentPath, prefetch }: NavItemProps): React.JSX.Element;
 
 type PwInputProps = {
     value?: string;
@@ -245,6 +246,7 @@ interface NavListItem {
         iconLabel: string;
         activeIcon: string;
     };
+    prefetch?: boolean;
 }
 interface NavListProps {
     items: NavListItem[];

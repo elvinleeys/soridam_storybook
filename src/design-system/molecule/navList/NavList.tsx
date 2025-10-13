@@ -13,6 +13,7 @@ export interface NavListItem {
     iconLabel: string;
     activeIcon: string;
   };
+  prefetch?: boolean;
 }
 
 interface NavListProps {
@@ -55,6 +56,7 @@ export default function NavList({ items, currentPath }: NavListProps) {
             img={item.img}
             label={item.label}
             currentPath={currentPath}
+            prefetch={item.prefetch}
           />
         ))}
       </div>
