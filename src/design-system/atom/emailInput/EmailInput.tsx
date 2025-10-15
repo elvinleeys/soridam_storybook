@@ -30,7 +30,7 @@ export default function EmailInput({
             `}
         >
             <div className="w-[1.125rem] h-[1.125rem] relative">
-                <Image src="/icons/login/email-ico.svg" alt="email icon" fill priority/> 
+                <Image src="/icons/login/email-ico.webp" alt="email icon" fill priority/> 
             </div>
             <input 
                 type="email"

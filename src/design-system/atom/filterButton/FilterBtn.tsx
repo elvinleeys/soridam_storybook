@@ -14,7 +14,7 @@ type DecibelButtonProps = {
 
 export default function FilterBtn({
     label="필터",
-    iconSrc = "/icons/filter/ico_map_filter.svg",
+    iconSrc = "/icons/filter/map-filter-ico.webp",
     className = "",
     textClassName = "",
     onClick,

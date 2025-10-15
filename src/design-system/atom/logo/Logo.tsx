@@ -11,7 +11,7 @@ const sizeMap: Record<LogoSize, string> = {
 export default function Logo({ size = "md" }: { size?: LogoSize }) {
     return (
         <div className={`${sizeMap[size]} relative`} >
-            <Image src="/icons/logo.svg" alt="soridam logo" fill priority/>
+            <Image src="/icons/logo.webp" alt="soridam logo" fill priority/>
         </div>
     );
 }

@@ -23,7 +23,7 @@ type Story = StoryObj<typeof FilterBtn>;
 export const Default: Story = {
   args: {
     label: '필터',
-    iconSrc: '/icons/filter/ico_map_filter.svg',
+    iconSrc: '/icons/filter/map-filter-ico.webp',
   },
 };
 
@@ -31,7 +31,7 @@ export const CustomTextStyle: Story = {
   args: {
     label: '강조 버튼',
     textClassName: 'text-primary font-semibold',
-    iconSrc: '/icons/filter/ico_map_filter.svg',
+    iconSrc: '/icons/filter/map-filter-ico.webp',
   },
 };
 
@@ -39,6 +39,6 @@ export const CustomButtonStyle: Story = {
   args: {
     label: '커스텀 버튼',
     className: 'bg-primary-blue text-white rounded-lg',
-    iconSrc: '/icons/filter/ico_map_filter.svg',
+    iconSrc: '/icons/filter/map-filter-ico.webp',
   },
 };

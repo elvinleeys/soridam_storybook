@@ -39,7 +39,7 @@ export default function PwInput({
             `}
         >
             <div className="w-[1.125rem] h-[1.125rem] relative">
-                <Image src="/icons/login/password-ico.svg" alt="password icon" fill priority/> 
+                <Image src="/icons/login/password-ico.webp" alt="password icon" fill priority/> 
             </div>
             <input 
                 type={showPassword ? "text" : "password"}
@@ -79,7 +79,7 @@ export default function PwInput({
                                     className="absolute inset-0"
                                 >
                                     <Image
-                                        src="/icons/login/pw-open-ico.svg"
+                                        src="/icons/login/pw-open-ico.webp"
                                         alt="password show"
                                         fill
                                         priority
@@ -95,7 +95,7 @@ export default function PwInput({
                                     className="absolute inset-0"
                                 >
                                     <Image
-                                        src="/icons/login/pw-close-ico.svg"
+                                        src="/icons/login/pw-close-ico.webp"
                                         alt="password hide"
                                         fill
                                         priority

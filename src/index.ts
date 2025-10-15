@@ -7,6 +7,7 @@ export { default as Decibel } from "./design-system/atom/decibelLevel/Decibel";
 export { default as EmailInput } from "./design-system/atom/emailInput/EmailInput";
 export { default as FilterButton } from "./design-system/atom/filterButton/FilterBtn";
 export { default as BackButton } from "./design-system/atom/iconButton/backButton/BackBtn";
+export { default as SBackButton } from "./design-system/atom/iconButton/signupBackButton/SBackButton";
 export { default as InfoButton } from "./design-system/atom/iconButton/infoButton/InfoBtn";
 export { default as SettingButton } from "./design-system/atom/iconButton/settingButton/SettingBtn";
 export { default as Input } from "./design-system/atom/input/Input";

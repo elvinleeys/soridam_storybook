@@ -34,9 +34,9 @@ type Story = StoryObj<typeof NavItem>;
 
 // 기본 데이터
 const defaultImg = {
-  icon: '/icons/nav/ico_measure_inactive.svg',
+  icon: '/icons/nav/ico_measure_inactive.webp',
   iconLabel: '소음 측정',
-  activeIcon: '/icons/nav/ico_measure_active.svg',
+  activeIcon: '/icons/nav/ico_measure_active.webp',
 };
 
 export const Inactive: Story = {

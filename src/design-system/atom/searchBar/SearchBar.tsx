@@ -32,7 +32,7 @@ export default function SearchBar({
             `}
         >
             <div className="w-[1.5rem] h-[1.5rem] relative">
-                <Image src="/icons/search-ico.svg" alt="search-icon" fill priority/>
+                <Image src="/icons/search-ico.webp" alt="search-icon" fill priority/>
             </div>
             <div
                 className="

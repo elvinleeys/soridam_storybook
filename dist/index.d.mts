@@ -6,14 +6,14 @@ declare const buttonStyles: {
     tertiary: string;
     ghost: string;
 };
-declare const sizeStyles$3: {
+declare const sizeStyles$4: {
     large: string;
     medium: string;
     small: string;
     xsmall: string;
 };
 type ButtonType = keyof typeof buttonStyles;
-type ButtonSize = keyof typeof sizeStyles$3;
+type ButtonSize = keyof typeof sizeStyles$4;
 interface ButtonProps {
     /** What button type? */
     buttonType?: ButtonType;
@@ -102,18 +102,31 @@ type DecibelButtonProps$1 = {
 };
 declare function FilterBtn({ label, iconSrc, className, textClassName, onClick, }: DecibelButtonProps$1): React.JSX.Element;
 
+declare const sizeStyles$3: {
+    sm: string;
+    md: string;
+    lg: string;
+};
+type BackButtonSize$1 = keyof typeof sizeStyles$3;
+interface BackButtonProps {
+    size?: BackButtonSize$1;
+    href?: string;
+    onClick?: () => void;
+}
+declare function BackButton({ size, href, onClick, }: BackButtonProps): React.JSX.Element;
+
 declare const sizeStyles$2: {
     sm: string;
     md: string;
     lg: string;
 };
 type BackButtonSize = keyof typeof sizeStyles$2;
-interface BackButtonProps {
+interface SBackButtonProps {
     size?: BackButtonSize;
     href?: string;
     onClick?: () => void;
 }
-declare function BackButton({ size, href, onClick, }: BackButtonProps): React.JSX.Element;
+declare function SBackButton({ size, href, onClick, }: SBackButtonProps): React.JSX.Element;
 
 declare const sizeStyles$1: {
     sm: string;
@@ -254,4 +267,4 @@ interface NavListProps {
 }
 declare function NavList({ items, currentPath }: NavListProps): React.JSX.Element;
 
-export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SearchBar, SettingBtn as SettingButton, StepIndicator, TimeDBChart };
+export { BackButton, BottomSheet, Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SBackButton, SearchBar, SettingBtn as SettingButton, StepIndicator, TimeDBChart };

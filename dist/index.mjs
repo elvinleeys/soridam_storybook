@@ -1,5 +1,5 @@
 import React4, { forwardRef, useState, useEffect } from 'react';
-import Image10 from 'next/image';
+import Image11 from 'next/image';
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Bar, Cell, LabelList } from 'recharts';
@@ -93,7 +93,7 @@ function CategoryIconButton({
                         ${flexRowCenter}
                     `
       },
-      /* @__PURE__ */ React4.createElement(Image10, { src: iconSrc, alt: `${label}`, fill: true, priority: true })
+      /* @__PURE__ */ React4.createElement(Image11, { src: iconSrc, alt: `${label}`, fill: true, priority: true })
     ), /* @__PURE__ */ React4.createElement(
       "p",
       {
@@ -323,10 +323,10 @@ function OneLineReviewInput({
   ));
 }
 var DECIBEL_ICONS = {
-  default: "/icons/default.svg",
-  quiet: "/icons/quiet.svg",
-  moderate: "/icons/moderate.svg",
-  loud: "/icons/loud.svg"
+  default: "/icons/decibel/default.webp",
+  quiet: "/icons/decibel/quiet.webp",
+  moderate: "/icons/decibel/moderate.webp",
+  loud: "/icons/decibel/loud.webp"
 };
 var SIZE_CLASSES = {
   sm: "w-[1.25rem] h-[1.25rem]",
@@ -340,7 +340,7 @@ function Decibel({
 }) {
   const iconSrc = DECIBEL_ICONS[level];
   const sizeClass = SIZE_CLASSES[size];
-  return /* @__PURE__ */ React4.createElement("div", { className: `relative ${sizeClass} ${iconClassName}` }, /* @__PURE__ */ React4.createElement(Image10, { src: iconSrc, alt: `${level} decibel level icon`, fill: true, priority: true }));
+  return /* @__PURE__ */ React4.createElement("div", { className: `relative ${sizeClass} ${iconClassName}` }, /* @__PURE__ */ React4.createElement(Image11, { src: iconSrc, alt: `${level} decibel level icon`, fill: true, priority: true }));
 }
 function EmailInput({
   value,
@@ -363,7 +363,7 @@ function EmailInput({
                 rounded-[0.5rem]
             `
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.125rem] h-[1.125rem] relative" }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/login/email-ico.svg", alt: "email icon", fill: true, priority: true })),
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.125rem] h-[1.125rem] relative" }, /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/login/email-ico.webp", alt: "email icon", fill: true, priority: true })),
     /* @__PURE__ */ React4.createElement(
       "input",
       {
@@ -379,7 +379,7 @@ function EmailInput({
 }
 function FilterBtn({
   label = "\uD544\uD130",
-  iconSrc = "/icons/filter/ico_map_filter.svg",
+  iconSrc = "/icons/filter/map-filter-ico.webp",
   className = "",
   textClassName = "",
   onClick
@@ -400,7 +400,7 @@ function FilterBtn({
             `,
       "aria-label": label
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(Image10, { src: iconSrc, alt: "filterIcon", fill: true, priority: true })),
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(Image11, { src: iconSrc, alt: "filterIcon", fill: true, priority: true })),
     /* @__PURE__ */ React4.createElement("p", { className: `text-base font-regular ${textClassName}` }, label)
   );
 }
@@ -416,9 +416,9 @@ function BackButton({
 }) {
   const currentSize = sizeStyles2[size];
   const icon = /* @__PURE__ */ React4.createElement(
-    Image10,
+    Image11,
     {
-      src: "/icons/back-ico.svg",
+      src: "/icons/back-ico.webp",
       alt: "back button",
       fill: true,
       priority: true
@@ -451,19 +451,41 @@ var sizeStyles3 = {
   md: "w-[1.5rem] h-[1.5rem]",
   lg: "w-[2rem] h-[2rem]"
 };
-function InfoBtn({
-  onClick,
-  size = "md"
+function SBackButton({
+  size = "md",
+  href,
+  onClick
 }) {
-  const currentSize = `${sizeStyles3[size]}`;
+  const currentSize = sizeStyles3[size];
+  const icon = /* @__PURE__ */ React4.createElement(
+    Image11,
+    {
+      src: "/icons/signup-back-ico.webp",
+      alt: "back button",
+      fill: true,
+      priority: true
+    }
+  );
+  if (href) {
+    return /* @__PURE__ */ React4.createElement(
+      Link,
+      {
+        href,
+        "aria-label": "\uB4A4\uB85C\uAC00\uAE30",
+        className: `${currentSize} relative inline-block`
+      },
+      icon
+    );
+  }
   return /* @__PURE__ */ React4.createElement(
     "button",
     {
+      type: "button",
       className: `${currentSize} relative`,
-      onClick,
-      "aria-label": "\uC815\uBCF4 \uBC84\uD2BC"
+      "aria-label": "\uB4A4\uB85C\uAC00\uAE30",
+      onClick
     },
-    /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/info-ico.svg", alt: "info button", fill: true, priority: true })
+    icon
   );
 }
 var sizeStyles4 = {
@@ -471,7 +493,7 @@ var sizeStyles4 = {
   md: "w-[1.5rem] h-[1.5rem]",
   lg: "w-[2rem] h-[2rem]"
 };
-function SettingBtn({
+function InfoBtn({
   onClick,
   size = "md"
 }) {
@@ -481,9 +503,29 @@ function SettingBtn({
     {
       className: `${currentSize} relative`,
       onClick,
+      "aria-label": "\uC815\uBCF4 \uBC84\uD2BC"
+    },
+    /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/info-ico.webp", alt: "info button", fill: true, priority: true })
+  );
+}
+var sizeStyles5 = {
+  sm: "w-[1.125rem] h-[1.125rem]",
+  md: "w-[1.5rem] h-[1.5rem]",
+  lg: "w-[2rem] h-[2rem]"
+};
+function SettingBtn({
+  onClick,
+  size = "md"
+}) {
+  const currentSize = `${sizeStyles5[size]}`;
+  return /* @__PURE__ */ React4.createElement(
+    "button",
+    {
+      className: `${currentSize} relative`,
+      onClick,
       "aria-label": "\uC124\uC815 \uBC84\uD2BC"
     },
-    /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/setting-ico.svg", alt: "setting button", fill: true, priority: true })
+    /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/setting-ico.webp", alt: "setting button", fill: true, priority: true })
   );
 }
 var Input = forwardRef(
@@ -534,7 +576,7 @@ var sizeMap = {
   lg: "w-[9.1875rem] h-[2.24875rem]"
 };
 function Logo({ size = "md" }) {
-  return /* @__PURE__ */ React4.createElement("div", { className: `${sizeMap[size]} relative` }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/logo.svg", alt: "soridam logo", fill: true, priority: true }));
+  return /* @__PURE__ */ React4.createElement("div", { className: `${sizeMap[size]} relative` }, /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/logo.webp", alt: "soridam logo", fill: true, priority: true }));
 }
 function NavItem({
   href,
@@ -566,7 +608,7 @@ function NavItem({
         className: "absolute inset-0"
       },
       /* @__PURE__ */ React4.createElement(
-        Image10,
+        Image11,
         {
           src: isActive ? img.activeIcon : img.icon,
           alt: "",
@@ -614,7 +656,7 @@ function PwInput({
                 rounded-[0.5rem]
             `
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.125rem] h-[1.125rem] relative" }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/login/password-ico.svg", alt: "password icon", fill: true, priority: true })),
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.125rem] h-[1.125rem] relative" }, /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/login/password-ico.webp", alt: "password icon", fill: true, priority: true })),
     /* @__PURE__ */ React4.createElement(
       "input",
       {
@@ -649,9 +691,9 @@ function PwInput({
           className: "absolute inset-0"
         },
         /* @__PURE__ */ React4.createElement(
-          Image10,
+          Image11,
           {
-            src: "/icons/login/pw-open-ico.svg",
+            src: "/icons/login/pw-open-ico.webp",
             alt: "password show",
             fill: true,
             priority: true
@@ -668,9 +710,9 @@ function PwInput({
           className: "absolute inset-0"
         },
         /* @__PURE__ */ React4.createElement(
-          Image10,
+          Image11,
           {
-            src: "/icons/login/pw-close-ico.svg",
+            src: "/icons/login/pw-close-ico.webp",
             alt: "password hide",
             fill: true,
             priority: true
@@ -723,7 +765,7 @@ function SearchBar({
                 border border-neutral-gray-soft
             `
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(Image10, { src: "/icons/search-ico.svg", alt: "search-icon", fill: true, priority: true })),
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(Image11, { src: "/icons/search-ico.webp", alt: "search-icon", fill: true, priority: true })),
     /* @__PURE__ */ React4.createElement(
       "div",
       {
@@ -1090,6 +1132,6 @@ function NavList({ items, currentPath }) {
   );
 }
 
-export { BackButton, BottomSheet, Button_default as Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SearchBar, SettingBtn as SettingButton, StepIndicator_default as StepIndicator, TimeDBChart };
+export { BackButton, BottomSheet, Button_default as Button, CategoryIconButton, Decibel, DecibelButton, DecibelLabel, EmailInput, ExpandBottomSheet, FilterBtn as FilterButton, InfoBtn as InfoButton, Input_default as Input, Logo, MDecibelLabel as MeasureDecibelLabel, Modal, NavItem, NavList, NoiseMeterChart, OneLineReviewInput, PwInput as PasswordInput, RadiusButton, SBackButton, SearchBar, SettingBtn as SettingButton, StepIndicator_default as StepIndicator, TimeDBChart };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

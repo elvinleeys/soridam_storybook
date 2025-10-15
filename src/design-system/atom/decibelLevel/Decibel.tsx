@@ -3,10 +3,10 @@ import Image from "next/image";
 
 // 데시벨 레벨별 아이콘 경로
 const DECIBEL_ICONS = {
-    default: "/icons/default.svg",
-    quiet: "/icons/quiet.svg",
-    moderate: "/icons/moderate.svg",
-    loud: "/icons/loud.svg",
+    default: "/icons/decibel/default.webp",
+    quiet: "/icons/decibel/quiet.webp",
+    moderate: "/icons/decibel/moderate.webp",
+    loud: "/icons/decibel/loud.webp",
 };
 
 // 아이콘 크기. TailwindCSS 클래스를 적용합니다.

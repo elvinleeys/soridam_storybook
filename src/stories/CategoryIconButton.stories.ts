@@ -47,7 +47,7 @@ type Story = StoryObj<typeof CategoryIconButton>;
 
 export const Cafe: Story = {
   args: {
-    iconSrc: "/icons/filter/category/cafe.svg",
+    iconSrc: "/icons/filter/category/cafe-ico.webp",
     label: "카페",
     active: false,
   },
@@ -55,7 +55,7 @@ export const Cafe: Story = {
 
 export const Culture: Story = {
   args: {
-    iconSrc: "/icons/filter/category/culture.svg",
+    iconSrc: "/icons/filter/category/culture-ico.webp",
     label: "문화시설",
     active: true,
   },
@@ -63,7 +63,7 @@ export const Culture: Story = {
 
 export const Cutlery: Story = {
   args: {
-    iconSrc: "/icons/filter/category/cutlery.svg",
+    iconSrc: "/icons/filter/category/cutlery-ico.webp",
     label: "음식점",
     active: false,
   },
@@ -71,7 +71,7 @@ export const Cutlery: Story = {
 
 export const Tour: Story = {
   args: {
-    iconSrc: "/icons/filter/category/tour.svg",
+    iconSrc: "/icons/filter/category/tour-ico.webp",
     label: "관광명소",
     active: true,
   },
@@ -79,7 +79,7 @@ export const Tour: Story = {
 
 export const CustomStyles: Story = {
   args: {
-    iconSrc: "/icons/filter/category/cafe.svg",
+    iconSrc: "/icons/filter/category/cafe-ico.webp",
     label: "스타일 변경",
     active: true,
     className: "border-green-500 bg-green-100",

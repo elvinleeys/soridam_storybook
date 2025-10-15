@@ -27,7 +27,7 @@ export default function BackButton({
 
   const icon = (
     <Image
-      src="/icons/back-ico.svg"
+      src="/icons/back-ico.webp"
       alt="back button"
       fill
       priority

@@ -29,7 +29,7 @@ export default function SettingBtn({
       onClick={onClick}
       aria-label="설정 버튼"
     >
-      <Image src="/icons/setting-ico.svg" alt="setting button" fill priority/>
+      <Image src="/icons/setting-ico.webp" alt="setting button" fill priority/>
     </button>
   );
 }
