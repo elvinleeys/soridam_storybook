@@ -136,3 +136,6 @@ font 관련 설정을 fonts.css로 분리 및 `font-display: swap` 적용
 - **2025.10.15**
 1. SignUp 관련 BackButton 추가
 2. img 파일을 svg 형식에서 webp로 전환
+
+- **2026.01.07**
+보안 이슈로 인한 NextJS 업데이트
