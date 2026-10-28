@@ -597,7 +597,7 @@ function NavItem({
       className: `w-[3.25rem] h-[3.125rem] ${flexColCenter} gap-[0.375rem]`,
       prefetch
     },
-    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative" }, /* @__PURE__ */ React4.createElement(AnimatePresence, { mode: "wait", initial: false }, /* @__PURE__ */ React4.createElement(
+    /* @__PURE__ */ React4.createElement("div", { className: "w-[1.5rem] h-[1.5rem] relative shrink-0" }, /* @__PURE__ */ React4.createElement(AnimatePresence, { mode: "wait", initial: false }, /* @__PURE__ */ React4.createElement(
       motion.div,
       {
         key: isActive ? "active" : "idle",
@@ -625,7 +625,7 @@ function NavItem({
           scale: prefersReducedMotion ? 1 : isActive ? 1.02 : 1
         },
         transition: { duration: 0.18 },
-        className: "font-pretendard font-medium text-sm leading-5 tracking-[0]"
+        className: "font-pretendard font-medium text-sm leading-5 tracking-[0] whitespace-nowrap"
       },
       label
     )
